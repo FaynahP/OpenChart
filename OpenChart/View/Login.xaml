@@ -53,7 +53,7 @@
             <Button x:Name="Loginbutton"   Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=Passwordbx}"  Grid.Row="2" Width="80" FontFamily="Lucida Console" FontWeight="Bold" Margin="78,34,477,82">
                 <TextBlock Text="Login" FontSize="15" FontFamily="Lucida Console" FontWeight="Bold" Foreground="Black"/>
                 <Button.BorderBrush>
-                    <SolidColorBrush Color="DarkBlue" Opacity="100"/>
+                    <SolidColorBrush Color="Blue" Opacity="100"/>
                 </Button.BorderBrush>
                 <Button.Background>
                     <SolidColorBrush Color="#51b6b6" Opacity="100"/>
