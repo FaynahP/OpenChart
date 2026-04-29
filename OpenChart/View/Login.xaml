@@ -29,7 +29,7 @@
                 <TextBlock Text="Password:" FontSize="16" Margin="10" FontFamily="Cascadia Mono" FontWeight="Bold" Foreground="Black"/>
             </StackPanel>
             <StackPanel Margin="-15,141,331,82" Grid.RowSpan="3">
-                <TextBox x:Name="User" Text="{Binding CurrentUser.Username,UpdateSourceTrigger=PropertyChanged}" Height="30" Width="261"/>
+                <TextBox x:Name="User" Text="{Binding CurrentUser.UserName,UpdateSourceTrigger=PropertyChanged}" Height="30" Width="261"/>
                 <PasswordBox x:Name="Passwordbx" Height="30" Margin="10" Width="260"/>
             </StackPanel>
             <Grid Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,87" Grid.RowSpan="2">

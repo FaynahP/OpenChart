@@ -31,7 +31,10 @@ namespace OpenChart.ViewModel
                 CurrentUser.Password = password.Password;   
             }
 
-            string connectionString = @"Data Source=MWEZ\MSSQLSERVER2022;Initial Catalog=OpenChartDatabase;Trusted_Connection=True;TrustServerCertificate=True;";
+            string connectionString = @"Data Source=XIAN;Initial Catalog=OpenChart;Trusted_Connection=True;TrustServerCertificate=True;";
+
+            //seania's: @"Data Source=XIAN;Initial Catalog=OpenChart;Trusted_Connection=True;TrustServerCertificate=True;"
+            //hannah's: @"Data Source=HANNAH\SQLEXPRESS;Initial Catalog=OpenChartDatabase;Trusted_Connection=True;TrustServerCertificate=True;"
 
             bool isLoginValid = false;
 
@@ -43,18 +46,20 @@ namespace OpenChart.ViewModel
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        MessageBox.Show("Accessing Database!", "Success",
-                        MessageBoxButton.OK, MessageBoxImage.Information);
 
-                        
                         command.Parameters.AddWithValue("@username", CurrentUser.UserName);
                         command.Parameters.AddWithValue("@password", CurrentUser.Password);
                         await connection.OpenAsync();
 
+                        
+
                         using (SqlDataReader reader = await command.ExecuteReaderAsync())
                         {
+                            
                             if (reader.HasRows)
                             {
+                                MessageBox.Show("Accessing Database!", "Success",
+                                MessageBoxButton.OK, MessageBoxImage.Information);
                                 isLoginValid = true;
                             }
                         }
