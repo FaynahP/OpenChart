@@ -22,6 +22,7 @@ namespace OpenChart.View
         public Login()
         {
             InitializeComponent();
+            DataContext = new ViewModel.LoginViewModel();
         }
     }
 }
