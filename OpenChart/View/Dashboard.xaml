@@ -6,7 +6,44 @@
         xmlns:local="clr-namespace:OpenChart.View"
         mc:Ignorable="d"
         Title="Dashboard" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Window.Background>
+        <SolidColorBrush Color="#f0f2f2"/>
+    </Window.Background>
+    <Viewbox Stretch="Uniform">
+
+        <Grid>
+
+            <Border Background="White" BorderBrush="DimGray" BorderThickness="1" Height="50" Margin="0,-2,0,432"/>
+            <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Margin="0,48,736,-2"/>
+            <StackPanel>
+                <Border Background="#9BDBDB" CornerRadius="6" Width="30" Height="30" Margin="0,3,825,-2">
+                    <Image Source="/Images/OCTempLogo.png" Height="35" Width="30" />
+                </Border>
+                <TextBlock Text="OpenChart" FontSize="20" FontFamily="Eras Bold ITC" FontWeight="ExtraBold" Width="111" Margin="0,-25,675,-2"/>
+            </StackPanel>
+            <Image Source="/Images/EMPT.png" Height="400" Width="500" Margin="159,0,21,20"/>
+            <StackPanel>
+                <Image Source="/Images/Dashboard.png" Height="15" Width="15" Margin="10,71,855,394"/>
+                <TextBlock Text="Dashboard" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-800,750,-1" Height="17"/>
+            </StackPanel>
+            <Button  Command="{Binding DashCommand}"  Margin="7,65,736,381" Opacity="50">
+                <Button.Background>
+                    <SolidColorBrush Opacity="50"/>
+                </Button.Background>
+
+            </Button>
+            <StackPanel>
+                <Image Source="/Images/Products.png" Height="15" Width="15" Margin="0,120,845,-1"/>
+                <TextBlock Text="Products" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-15,750,-1" Height="17"/>
+            </StackPanel>
+            <StackPanel>
+                <Image Source="/Images/Reports.png" Height="15" Width="15" Margin="0,170,845,-1"/>
+                <TextBlock Text="Transactions" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-12,750,-1" Height="17"/>
+            </StackPanel>
+
+
+        </Grid>
+
+    </Viewbox>
+
 </Window>

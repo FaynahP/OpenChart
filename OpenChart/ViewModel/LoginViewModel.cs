@@ -31,10 +31,10 @@ namespace OpenChart.ViewModel
                 CurrentUser.Password = password.Password;   
             }
 
-            string connectionString = @"Data Source=XIAN;Initial Catalog=OpenChart;Trusted_Connection=True;TrustServerCertificate=True;";
+            string connectionString = /*@"Data Source=XIAN;Initial Catalog=OpenChart;Trusted_Connection=True;TrustServerCertificate=True;"*/ @"Data Source=MWEZ\MSSQLSERVER2022;Initial Catalog=OpenChartDatabase;Trusted_Connection=True;TrustServerCertificate=True;";
 
             //seania's: @"Data Source=XIAN;Initial Catalog=OpenChart;Trusted_Connection=True;TrustServerCertificate=True;"
-            //hannah's: @"Data Source=HANNAH\SQLEXPRESS;Initial Catalog=OpenChartDatabase;Trusted_Connection=True;TrustServerCertificate=True;"
+            //hannah's: @"Data Source=MWEZ\MSSQLSERVER2022;Initial Catalog=OpenChartDatabase;Trusted_Connection=True;TrustServerCertificate=True;"
 
             bool isLoginValid = false;
 

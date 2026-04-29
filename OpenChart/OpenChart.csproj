@@ -98,7 +98,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Dashboard.png" />
+    <Resource Include="Images\Products.png" />
+    <Resource Include="Images\Reports.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\OCLogIn %281%29.png" />
     <Resource Include="Images\OCTempLogo.png" />
@@ -112,6 +116,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Batch.png" />
+    <Resource Include="Images\Expire.png" />
+    <Resource Include="Images\Med.png" />
+    <Resource Include="Images\Stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\EMPT.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

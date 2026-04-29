@@ -8,5 +8,6 @@ namespace OpenChart.ViewModel
 {
     internal class DashboardViewModel
     {
+
     }
 }
