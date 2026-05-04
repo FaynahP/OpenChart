@@ -11,43 +11,53 @@
     </Window.Background>
     <Viewbox Stretch="Uniform">
         <Grid Margin="0,0,0,62">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="29*"/>
+                <RowDefinition Height="31*"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="191*"/>
                 <ColumnDefinition Width="809*"/>
             </Grid.ColumnDefinitions>
             <!--BACKGROUND-->
             <Border Background="White" BorderBrush="DimGray" BorderThickness="1" Height="50" Width="1034" VerticalAlignment="Top" Margin="0,0,0,0" Grid.ColumnSpan="2"/>
-                <!--Title-->
-            <StackPanel HorizontalAlignment="Left" Margin="10,5,0,0" Grid.ColumnSpan="2">
+            <!--Title-->
+            <StackPanel HorizontalAlignment="Left" Margin="10,5,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
                 <Border Background="#9BDBDB" CornerRadius="6" Width="30" Height="30" Margin="0,3,825,-2">
                     <Image Source="/Images/ICONS/OCTempLogo.png" Height="35" Width="30" />
                 </Border>
                 <TextBlock Text="OpenChart" FontSize="20" FontFamily="Eras Bold ITC" FontWeight="ExtraBold" Width="111" Margin="0,-25,675,-2"/>
             </StackPanel>
-            <Border Background="#dcf4f4" Height="300" Width="500" Margin="134,115,175,65" BorderThickness="2" BorderBrush="#aac7c7" CornerRadius="5" Grid.Column="1">
+            <Border Background="#dcf4f4" Height="300" Width="500" Margin="190,115,231,65" BorderThickness="2" BorderBrush="#aac7c7" CornerRadius="5" Grid.Column="1" Grid.RowSpan="2">
                 <Image/>
             </Border>
             <!--NAVIGATION BAR-->
-            <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="493" Width="200" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-62" Grid.ColumnSpan="2"/>
-                <!--Dashboard-->
-            <StackPanel Grid.ColumnSpan="2" Margin="10,20,80,10">
-                <Image Source="/Images/ICONS/DASHBOARD.png" Height="20" Width="20" Margin="0,120,900,-1"/>
+            <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="493" Width="200" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-62" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            <!--Dashboard-->
+            <Border Background="#54b4b4"  Height="40" Width="5" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3,151,0,0"/>
+            <StackPanel Grid.ColumnSpan="2" Margin="10,20,80,10" Grid.RowSpan="2">
+                <Image Source="/Images/ICONS/DASHBOARD.png" Height="20" Width="20" Margin="0,140,900,-1"/>
                 <TextBlock Text="Dashboard" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold" Width="70" Height="17"  Margin="0,-15,800,0"/>
-                <Button  Command="{Binding DashCommand}" Opacity="50"  HorizontalAlignment="Left" Margin="0,0,0,0" Height="100" Width="100">
-                    <Button.Background>
-                        <SolidColorBrush Opacity="50"/>
-                    </Button.Background>
+                <Button  Command="{Binding DashCommand}" Opacity="0" BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="188.5" Margin="0,-30,0,0">
+                   
+                    
                 </Button>
             </StackPanel>
-                <!--Products-->
-            <StackPanel Grid.ColumnSpan="2" Margin="10,50,80,10">
-                <Image Source="/Images/ICONS/PRODUCTS.png" Height="50" Width="25" Margin="0,120,900,-1"/>
+            <!--Products-->
+            <StackPanel Grid.ColumnSpan="2" Margin="10,50,80,10" Grid.RowSpan="2">
+                <Image Source="/Images/ICONS/PRODUCTS.png" Height="50" Width="25" Margin="0,150,900,-1"/>
                 <TextBlock Text="Products" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-45,800,0" Height="17"/>
+                <Button  Command="{Binding ProdCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
+                   
+                </Button>
             </StackPanel>
-                <!--Transactions-->
-            <StackPanel Grid.ColumnSpan="2" Margin="10,50,80,10">
-                <Image Source="/Images/ICONS/REPORTS.png" Height="50" Width="25" Margin="0,170,900,-1"/>
+            <!--Transactions-->
+            <StackPanel Grid.ColumnSpan="2" Margin="10,50,80,10" Grid.RowSpan="2">
+                <Image Source="/Images/ICONS/REPORTS.png" Height="50" Width="25" Margin="0,203,900,-1"/>
                 <TextBlock Text="Transactions" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-45,800,0" Height="17"/>
+                <Button  Command="{Binding TransCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
+                    
+                </Button>
             </StackPanel>
 
 
