@@ -19,9 +19,11 @@
                 <ColumnDefinition Width="191*"/>
                 <ColumnDefinition Width="809*"/>
             </Grid.ColumnDefinitions>
-            <!--BACKGROUND-->
+            <!--TOP BAR-->
             <Border Background="White" BorderBrush="DimGray" BorderThickness="1" Height="50" Width="1034" VerticalAlignment="Top" Margin="0,0,0,0" Grid.ColumnSpan="2"/>
             <!--Title-->
+            <TextBlock Text="Welcome {user name}!" FontSize="20" FontFamily="Eras Bold ITC" FontWeight="ExtraBold" Height="30"  Grid.Column="1" Margin="207,67,581,348"/>
+
             <StackPanel HorizontalAlignment="Left" Margin="10,5,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
                 <Border Background="#9BDBDB" CornerRadius="6" Width="30" Height="30" Margin="0,3,825,-2">
                     <Image Source="/Images/ICONS/OCTempLogo.png" Height="35" Width="30" />
@@ -39,8 +41,8 @@
                 <Image Source="/Images/ICONS/DASHBOARD.png" Height="20" Width="20" Margin="0,140,900,-1"/>
                 <TextBlock Text="Dashboard" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold" Width="70" Height="17"  Margin="0,-15,800,0"/>
                 <Button  Command="{Binding DashCommand}" Opacity="0" BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="188.5" Margin="0,-30,0,0">
-                   
-                    
+
+
                 </Button>
             </StackPanel>
             <!--Products-->
@@ -48,7 +50,7 @@
                 <Image Source="/Images/ICONS/PRODUCTS.png" Height="50" Width="25" Margin="0,150,900,-1"/>
                 <TextBlock Text="Products" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-45,800,0" Height="17"/>
                 <Button  Command="{Binding ProdCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
-                   
+
                 </Button>
             </StackPanel>
             <!--Transactions-->
@@ -56,7 +58,7 @@
                 <Image Source="/Images/ICONS/REPORTS.png" Height="50" Width="25" Margin="0,203,900,-1"/>
                 <TextBlock Text="Transactions" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-45,800,0" Height="17"/>
                 <Button  Command="{Binding TransCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
-                    
+
                 </Button>
             </StackPanel>
 
