@@ -24,6 +24,6 @@ namespace OpenChart.View
             InitializeComponent();
         }
 
-      
+        
     }
 }

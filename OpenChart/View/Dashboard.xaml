@@ -10,35 +10,44 @@
         <SolidColorBrush Color="#f0f2f2"/>
     </Window.Background>
     <Viewbox Stretch="Uniform">
-
-        <Grid>
-
-            <Border Background="White" BorderBrush="DimGray" BorderThickness="1" Height="50" Margin="0,-2,0,432"/>
-            <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Margin="0,48,736,-2"/>
-            <StackPanel>
+        <Grid Margin="0,0,0,62">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="191*"/>
+                <ColumnDefinition Width="809*"/>
+            </Grid.ColumnDefinitions>
+            <!--BACKGROUND-->
+            <Border Background="White" BorderBrush="DimGray" BorderThickness="1" Height="50" Width="1034" VerticalAlignment="Top" Margin="0,0,0,0" Grid.ColumnSpan="2"/>
+                <!--Title-->
+            <StackPanel HorizontalAlignment="Left" Margin="10,5,0,0" Grid.ColumnSpan="2">
                 <Border Background="#9BDBDB" CornerRadius="6" Width="30" Height="30" Margin="0,3,825,-2">
-                    <Image Source="/Images/OCTempLogo.png" Height="35" Width="30" />
+                    <Image Source="/Images/ICONS/OCTempLogo.png" Height="35" Width="30" />
                 </Border>
                 <TextBlock Text="OpenChart" FontSize="20" FontFamily="Eras Bold ITC" FontWeight="ExtraBold" Width="111" Margin="0,-25,675,-2"/>
             </StackPanel>
-            <Image Source="/Images/EMPT.png" Height="400" Width="500" Margin="159,0,21,20"/>
-            <StackPanel>
-                <Image Source="/Images/Dashboard.png" Height="15" Width="15" Margin="10,71,855,394"/>
-                <TextBlock Text="Dashboard" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-800,750,-1" Height="17"/>
+            <Border Background="#dcf4f4" Height="300" Width="500" Margin="134,115,175,65" BorderThickness="2" BorderBrush="#aac7c7" CornerRadius="5" Grid.Column="1">
+                <Image/>
+            </Border>
+            <!--NAVIGATION BAR-->
+            <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="493" Width="200" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-62" Grid.ColumnSpan="2"/>
+                <!--Dashboard-->
+            <StackPanel Grid.ColumnSpan="2" Margin="10,20,80,10">
+                <Image Source="/Images/ICONS/DASHBOARD.png" Height="20" Width="20" Margin="0,120,900,-1"/>
+                <TextBlock Text="Dashboard" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold" Width="70" Height="17"  Margin="0,-15,800,0"/>
+                <Button  Command="{Binding DashCommand}" Opacity="50"  HorizontalAlignment="Left" Margin="0,0,0,0" Height="100" Width="100">
+                    <Button.Background>
+                        <SolidColorBrush Opacity="50"/>
+                    </Button.Background>
+                </Button>
             </StackPanel>
-            <Button  Command="{Binding DashCommand}"  Margin="7,65,736,381" Opacity="50">
-                <Button.Background>
-                    <SolidColorBrush Opacity="50"/>
-                </Button.Background>
-
-            </Button>
-            <StackPanel>
-                <Image Source="/Images/Products.png" Height="15" Width="15" Margin="0,120,845,-1"/>
-                <TextBlock Text="Products" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-15,750,-1" Height="17"/>
+                <!--Products-->
+            <StackPanel Grid.ColumnSpan="2" Margin="10,50,80,10">
+                <Image Source="/Images/ICONS/PRODUCTS.png" Height="50" Width="25" Margin="0,120,900,-1"/>
+                <TextBlock Text="Products" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-45,800,0" Height="17"/>
             </StackPanel>
-            <StackPanel>
-                <Image Source="/Images/Reports.png" Height="15" Width="15" Margin="0,170,845,-1"/>
-                <TextBlock Text="Transactions" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-12,750,-1" Height="17"/>
+                <!--Transactions-->
+            <StackPanel Grid.ColumnSpan="2" Margin="10,50,80,10">
+                <Image Source="/Images/ICONS/REPORTS.png" Height="50" Width="25" Margin="0,170,900,-1"/>
+                <TextBlock Text="Transactions" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-45,800,0" Height="17"/>
             </StackPanel>
 
 

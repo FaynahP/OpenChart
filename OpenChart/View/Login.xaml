@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Login" Height="450" Width="800">
     <Window.Background>
-        <ImageBrush ImageSource="/Images/OCLogIn (1).png" />
+        <ImageBrush ImageSource="/Images/BACKGROUNDS/OCLogIn (1).png" />
     </Window.Background>
     <Viewbox Stretch="Uniform">
         <Grid>
@@ -23,7 +23,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Image Source="/Images/OCTempLogo.png" Width="190" Height="147" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,10,0,0"/>
+            <Image Source="/Images/ICONS/OCTempLogo.png" Width="190" Height="147" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,10,0,0"/>
             <StackPanel Margin="-86,136,617,10">
                 <TextBlock Text="Username:" FontSize="16" Margin="10" FontFamily="Cascadia Mono" FontWeight="Bold" Foreground="Black" />
                 <TextBlock Text="Password:" FontSize="16" Margin="10" FontFamily="Cascadia Mono" FontWeight="Bold" Foreground="Black"/>
