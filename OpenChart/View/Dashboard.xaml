@@ -85,7 +85,7 @@
             </StackPanel>
             <Button Content="Logout" Height="20" Width="50" FontFamily="Gill Sans MT" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,26,998,-46" Grid.Column="1" Grid.Row="1"/>
             <!--DASHBOARD CONTENT-->
-            <TextBlock Text="{Binding CurrentUser.UserName, StringFormat='Welcome, {0}!'}" FontSize="25" FontFamily="Century Gothic" FontWeight="ExtraBold" Height="30"  Grid.Column="1" Margin="170,37,617,436"/>
+            <TextBlock Text="{Binding CurrentUser.First_Name, StringFormat='Welcome, {0}!'}" FontSize="25" FontFamily="Century Gothic" FontWeight="ExtraBold" Height="30"  Grid.Column="1" Margin="170,37,617,436"/>
 
             <Border Background="#dcf4f4" Margin="169,75,49,224" BorderThickness="3" BorderBrush="#aac7c7" CornerRadius="5" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
                 <StackPanel>
