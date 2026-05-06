@@ -130,12 +130,15 @@
     <Folder Include="Images\BUTTONS\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\ICONS\DASHBOARD.png" />
-    <Resource Include="Images\ICONS\PRODUCTS.png" />
     <Resource Include="Images\ICONS\REPORTS.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\ICONS\PLUS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ICONS\CLIENTS.png" />
+    <Resource Include="Images\ICONS\DASHBOARD.png" />
+    <Resource Include="Images\ICONS\SUPPLY BATCH.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
