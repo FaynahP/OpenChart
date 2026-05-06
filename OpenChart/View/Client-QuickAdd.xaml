@@ -1,11 +1,11 @@
-﻿<Window x:Class="OpenChart.View.Supply_QuickAdd"
+﻿<Window x:Class="OpenChart.View.Client_QuickAdd"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OpenChart.View"
         mc:Ignorable="d"
-        Title="Supply_QuickAdd" Height="450" Width="800">
+        Title="Client_QuickAdd" Height="450" Width="800">
     <Window.Background>
         <SolidColorBrush Color="#f0f2f2"/>
     </Window.Background>
@@ -20,7 +20,7 @@
                 <ColumnDefinition Width="809*"/>
             </Grid.ColumnDefinitions>
             <!--TOP BAR-->
-            <Border Background="White" BorderBrush="DimGray" BorderThickness="1" Height="40" Width="1097" VerticalAlignment="Top" Margin="-8,-5.5,0,0" Grid.Column="1">
+            <Border Background="White" BorderBrush="DimGray" BorderThickness="1" Height="40" Width="1097" VerticalAlignment="Top" Margin="-9,-5.5,0,0" Grid.Column="1">
                 <Button Content="Logout" Height="20" Width="50" FontFamily="Gill Sans MT" FontWeight="Regular" HorizontalAlignment="Right" Margin="10,0,10,0"/>
 
             </Border>
@@ -33,7 +33,7 @@
 
 
             <!--NAVIGATION BAR-->
-            <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="556" Width="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-69" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="554" Width="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-67" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
             <!--AddButton-->
             <Button Background="#9bdbdb" Height="50" Margin="6,45,953,394" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
                 <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Gill Sans MT" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0"/>
@@ -91,39 +91,31 @@
                         <Border Background="#ebffff" Height= "375" Width="450" Margin="0,60,0,0">
                             <StackPanel Margin="0,-20,0,0">
                                 <StackPanel Margin="20,10,10,10" HorizontalAlignment="Left">
-                                    <TextBlock Text="Name" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20" Margin="0,30,0,0" Width="100"/>
-                                    <TextBlock Text="Category" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="0,30,0,0" Width="100"/>
-                                    <TextBlock Text="Batch No." FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="0,30,0,0" Width="100"/>
-                                    <TextBlock Text="Supplier ID" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="0,30,0,0" Width="100"/>
-                                    <TextBlock Text="Stocks" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20" Margin="0,30,0,0"  Width="100"/>
-                                    <TextBlock Text="Expiry Date" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="0,30,0,0" Width="100"/>
+                                    <TextBlock Text="First Name" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20" Margin="-50,50,0,0" Width="100"/>
+                                    <TextBlock Text="Last Name" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="-50,50,0,0" Width="100"/>
+                                    <TextBlock Text="Contact No." FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="-50,50,0,0" Width="100"/>
+                                    <TextBlock Text="Emergency Contact" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="0,50,0,0" Width="150"/>
                                 </StackPanel>
-                                <StackPanel Margin="200,-281,10,10" HorizontalAlignment="Left">
+                                <StackPanel Margin="200,-240,10,10" HorizontalAlignment="Left">
                                     <TextBox Height="20" Width="200"/>
-                                    <ComboBox Height="20" Width="200" Margin="0,30,0,0" Background="White">
-                                        <ComboBoxItem Content="Category 1"/>
-                                        <ComboBoxItem Content="Category 2"/>
-                                        <ComboBoxItem Content="Category 3"/>
-                                    </ComboBox>
-                                    <TextBox Height="20" Width="200" Margin="0,30,0,0"/>
-                                    <TextBox Height="20" Width="200" Margin="0,30,0,0"/>
-                                    <TextBox Height="20" Width="200" Margin="0,30,0,0"/>
-                                    <DatePicker Height="25" Width="200" Margin="0,30,0,0"/>
+                                    <TextBox Height="20" Width="200" Margin="0,50,0,0"/>
+                                    <TextBox Height="20" Width="200" Margin="0,50,0,0"/>
+                                    <TextBox Height="20" Width="200" Margin="0,50,0,0"/>
                                 </StackPanel>
-                                <Button Content="ADD SUPPLY" Height="40" Width="90" HorizontalAlignment="Right" Margin="0,10,160,0" Background="#9bdbdb" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
+                                <Button Content="ADD CLIENT" Height="40" Width="90" HorizontalAlignment="Right" Margin="0,20,160,0" Background="#9bdbdb" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
                                 <Button Content="CANCEL" Height="40" Width="90" HorizontalAlignment="Right" Margin="0,-40,50,0" Background="#c1f0f0" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
                             </StackPanel>
-                            
+
                         </Border>
-                        <Button Background="#9bdbdb" Height= "45" Width="235" Margin="-238,-825,0,0" BorderThickness="1" BorderBrush="#aac7c7">
-                            <TextBlock Text="CLIENT" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="73" Margin="74,10,86,9"/>
+                        <Button Background="#9bdbdb" Height= "45" Width="235" Margin="236,-825,0,0" BorderThickness="1" BorderBrush="#aac7c7">
+                            <TextBlock Text="SUPPLY" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="73" Margin="74,10,86,9"/>
                         </Button>
-                        <TextBlock Text="SUPPLY" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20" Width="100" Margin="314,-820,86,9"/>
+                        <TextBlock Text="CLIENT" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20" Width="100" Margin="-140,-820,86,9"/>
                     </StackPanel>
 
                 </Border>
             </StackPanel>
-            
+
         </Grid>
     </Viewbox>
 </Window>
