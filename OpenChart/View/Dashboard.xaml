@@ -20,53 +20,119 @@
                 <ColumnDefinition Width="809*"/>
             </Grid.ColumnDefinitions>
             <!--TOP BAR-->
-            <Border Background="White" BorderBrush="DimGray" BorderThickness="1" Height="50" Width="1034" VerticalAlignment="Top" Margin="0,0,0,0" Grid.ColumnSpan="2"/>
-            <!--Title-->
-            <TextBlock Text="Welcome {user name}!" FontSize="20" FontFamily="Eras Bold ITC" FontWeight="ExtraBold" Height="30"  Grid.Column="1" Margin="204,74,583,385"/>
+            <Border Background="White" BorderBrush="DimGray" BorderThickness="1" Height="40" Width="1097" VerticalAlignment="Top" Margin="-9,-5.5,0,0" Grid.Column="1">
+                <Button Content="Logout" Height="20" Width="50" FontFamily="Gill Sans MT" FontWeight="Regular" HorizontalAlignment="Right" Margin="10,0,10,0"/>
 
-            <StackPanel HorizontalAlignment="Left" Margin="10,5,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            </Border>
+            <StackPanel HorizontalAlignment="Left" Margin="10,-4.5,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
                 <Border Background="#9BDBDB" CornerRadius="6" Width="30" Height="30" Margin="0,3,825,-2">
                     <Image Source="/Images/ICONS/OCTempLogo.png" Height="35" Width="30" />
                 </Border>
-                <TextBlock Text="OpenChart" FontSize="20" FontFamily="Eras Bold ITC" FontWeight="ExtraBold" Width="111" Margin="0,-25,675,-2"/>
+                <TextBlock Text="OpenChart" FontSize="20" FontFamily="Gill Sans MT" FontWeight="Bold" Width="111" Margin="0,-25,675,-2"/>
             </StackPanel>
-            <Border Background="#dcf4f4" Height="300" Width="500" Margin="190,115,231,65" BorderThickness="2" BorderBrush="#aac7c7" CornerRadius="5" Grid.Column="1" Grid.RowSpan="2">
-                <Image/>
-            </Border>
+
+
             <!--NAVIGATION BAR-->
-            <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="493" Width="200" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-62" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="542.25" Width="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-73" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
             <!--AddButton-->
-            <Border Background="#9bdbdb" Height="50" Width="120" Grid.Column="1" Margin="26,72,943,354" BorderThickness="1" BorderBrush="#83c2c2" CornerRadius="5">
-                <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="43,0,0,0"/>
-            </Border>
-            <Image Source="/Images/ICONS/PLUS.png" Height="30" Width="30" HorizontalAlignment="Left" Margin="33,88,0,371" Grid.Column="1"/>
+            <Button Background="#9bdbdb" Height="50" Margin="6,45,953,394" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
+                <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Gill Sans MT" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0"/>
+            </Button>
+            <Image Source="/Images/ICONS/PLUS.png" Margin="2,5,943,354" Height="30" Width="30" HorizontalAlignment="Left"  Grid.Column="1"/>
+
 
             <!--Dashboard-->
-            <Border Background="#54b4b4"  Height="40" Width="5" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3,151,0,0"/>
-            <StackPanel Grid.ColumnSpan="2" Margin="10,20,80,10" Grid.RowSpan="2">
+            <Border Background="#54b4b4"  Height="40" Width="5" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3,131,0,0"/>
+            <StackPanel Grid.ColumnSpan="2" Margin="-59,0,80,10" Grid.RowSpan="2">
                 <Image Source="/Images/ICONS/DASHBOARD.png" Height="20" Width="20" Margin="0,140,900,-1"/>
-                <TextBlock Text="Dashboard" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold" Width="70" Height="17"  Margin="0,-15,800,0"/>
+                <TextBlock Text="Dashboard" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold" Width="70" Height="17"  Margin="0,-15,802,0"/>
                 <Button  Command="{Binding DashCommand}" Opacity="0" BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="188.5" Margin="0,-30,0,0">
 
 
                 </Button>
             </StackPanel>
-            <!--Products-->
-            <StackPanel Grid.ColumnSpan="2" Margin="10,50,80,10" Grid.RowSpan="2">
-                <Image Source="/Images/ICONS/PRODUCTS.png" Height="50" Width="25" Margin="0,150,900,-1"/>
-                <TextBlock Text="Products" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-45,800,0" Height="17"/>
-                <Button  Command="{Binding ProdCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
+            <!--Clients-->
+            <StackPanel Grid.ColumnSpan="2" Margin="-59,40,80,10" Grid.RowSpan="2">
+                <Image Source="/Images/ICONS/CLIENTS.png" Height="50" Width="25" Margin="0,150,900,-1"/>
+                <TextBlock Text="Clients" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="70" Margin="0,-45,800,0" Height="17"/>
+                <Button  Command="{Binding ClientCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
 
                 </Button>
             </StackPanel>
             <!--Transactions-->
-            <StackPanel Grid.ColumnSpan="2" Margin="10,50,80,10" Grid.RowSpan="2">
+            <StackPanel Grid.ColumnSpan="2" Margin="-59,45,80,10" Grid.RowSpan="2">
                 <Image Source="/Images/ICONS/REPORTS.png" Height="50" Width="25" Margin="0,203,900,-1"/>
-                <TextBlock Text="Transactions" FontSize="12" FontFamily="Eras Light ITC" FontWeight="Bold"  Width="70" Margin="0,-45,800,0" Height="17"/>
+                <TextBlock Text="Transactions" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="72" Margin="2,-45,800,0" Height="17"/>
                 <Button  Command="{Binding TransCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
 
                 </Button>
             </StackPanel>
+            <!--Supply Batch-->
+            <StackPanel Grid.ColumnSpan="2" Margin="-59,107,80,10" Grid.RowSpan="2">
+                <Image Source="/Images/ICONS/SUPPLY BATCH.png" Height="50" Width="25" Margin="0,203,899,-1"/>
+                <TextBlock Text="Supply Batch" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="73" Margin="5,-45,800,0" Height="17"/>
+                <Button  Command="{Binding SuBCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
+
+                </Button>
+            </StackPanel>
+            <!--Suppliers-->
+            <StackPanel Grid.ColumnSpan="2" Margin="-59,170,76,10" Grid.RowSpan="2">
+                <Image Source="/Images/ICONS/SUPPLIER.png" Height="50" Width="25" Margin="0,203,899,-1"/>
+                <TextBlock Text="Suppliers" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="73" Margin="8,-45,800,0" Height="17"/>
+                <Button  Command="{Binding SuppCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
+
+                </Button>
+            </StackPanel>
+            <Button Content="Logout" Height="20" Width="50" FontFamily="Gill Sans MT" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,26,998,-46" Grid.Column="1" Grid.Row="1"/>
+            <!--DASHBOARD CONTENT-->
+            <TextBlock Text="WELCOME, {user name}!" FontSize="25" FontFamily="Century Gothic" FontWeight="ExtraBold" Height="30"  Grid.Column="1" Margin="170,37,617,436"/>
+
+            <Border Background="#dcf4f4" Margin="169,75,49,224" BorderThickness="3" BorderBrush="#aac7c7" CornerRadius="5" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+                <StackPanel>
+                    <Image Source="/Images/ICONS/MASCOTSDRUGS.png" Height="157" Width="150" Grid.Column="1" Margin="6,15,678,21" />
+                    <TextBlock Text="TOTAL CLIENTS" FontSize="18" FontFamily="Century Gothic" FontWeight="Bold" Margin="33,-330,-20,10" Height="30" Width="145"/>
+                    <TextBlock Text="TOTAL SUPPLIES" FontSize="18" FontFamily="Century Gothic" FontWeight="Bold" Margin="573,-330,-20,10" Height="30" Width="145"/>
+                    <Line X1="-90" Y1="90" X2="-90" Y2="-90" Stroke="#b6bfbd" StrokeThickness="1" Margin="340,-95,-20,10" Grid.Column="1"/>
+                    <Border Background="#9bdbdb" BorderBrush="#54b4b4" Height="130" Width="250" Margin="10,-170,-20,10" CornerRadius="3" BorderThickness="2">
+                        
+                    </Border>
+                    <Border Background="#9bdbdb" BorderBrush="#54b4b4" Height="130" Width="250" Margin="550,-170,-20,10" CornerRadius="3" BorderThickness="2">
+
+                    </Border>
+                </StackPanel>
+
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.288"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.452"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+            </Border>
+            <Border x:Name="SUPPLYGRID" Background="#dcf4f4" Margin="169,310,49,75" Height="115" BorderThickness="2" BorderBrush="#aac7c7" CornerRadius="5" Grid.Column="1">
+                <ListView ItemsSource="{Binding supplyBatchList}" SelectedItem="{Binding SelectedSuB}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Product Name" DisplayMemberBinding="{Binding suBName}" Width="Auto"/>
+                            <GridViewColumn Header="Category" DisplayMemberBinding="{Binding suBName}" Width="Auto"/>
+                            <GridViewColumn Header="Stocks" DisplayMemberBinding="{Binding suBName}" Width="Auto"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Border>
+            <TextBlock Text="Recently Added" FontSize="18" FontFamily="Century Gothic" FontWeight="Bold"  Grid.Column="1" Margin="170,285,618,184"/>
+            <Border x:Name="CLIENTGRID"  Background="#dcf4f4" Margin="169,427,49,-59" Height="115" BorderThickness="2" BorderBrush="#aac7c7" CornerRadius="5" Grid.Column="1" Grid.RowSpan="2">
+                <ListView ItemsSource="{Binding supplyBatchList}" SelectedItem="{Binding SelectedSuB}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Full Name" DisplayMemberBinding="{Binding suBName}" Width="Auto"/>
+                            <GridViewColumn Header="Product Name" DisplayMemberBinding="{Binding suBName}" Width="Auto"/>
+                            <GridViewColumn Header="Status" DisplayMemberBinding="{Binding suBName}" Width="Auto"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Border>
 
 
         </Grid>

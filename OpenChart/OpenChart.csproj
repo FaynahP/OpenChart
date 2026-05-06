@@ -71,12 +71,6 @@
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Products.xaml.cs">
-      <DependentUpon>Products.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Transactions.xaml.cs">
-      <DependentUpon>Transactions.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -117,17 +111,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Products.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Transactions.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\BUTTONS\" />
+    <Resource Include="Images\ICONS\MASCOTSDRUGS.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\ICONS\REPORTS.png" />
@@ -139,6 +125,9 @@
     <Resource Include="Images\ICONS\CLIENTS.png" />
     <Resource Include="Images\ICONS\DASHBOARD.png" />
     <Resource Include="Images\ICONS\SUPPLY BATCH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ICONS\SUPPLIER.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
