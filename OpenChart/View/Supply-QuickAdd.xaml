@@ -21,8 +21,9 @@
             </Grid.ColumnDefinitions>
             <!--TOP BAR-->
             <Border Background="White" BorderBrush="DimGray" BorderThickness="1" Height="40" Width="1097" VerticalAlignment="Top" Margin="-8,-5.5,0,0" Grid.Column="1">
-                <Button Content="Logout" Height="20" Width="50" FontFamily="Gill Sans MT" FontWeight="Regular" HorizontalAlignment="Right" Margin="10,0,10,0"/>
-
+                <Button  Height="20" Width="50" FontFamily="Gill Sans MT" FontWeight="Regular" HorizontalAlignment="Right" Margin="10,0,10,0" Background="{x:Null}" BorderBrush="{x:Null}">
+                    <TextBlock Text="Logout" TextDecorations="Underline" FontSize="15" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+                </Button>
             </Border>
             <StackPanel HorizontalAlignment="Left" Margin="10,-4.5,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
                 <Border Background="#9BDBDB" CornerRadius="6" Width="30" Height="30" Margin="0,3,825,-2">
@@ -83,7 +84,9 @@
 
                 </Button>
             </StackPanel>
-            <Button Content="Logout" Height="20" Width="50" FontFamily="Gill Sans MT" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,26,998,-46" Grid.Column="1" Grid.Row="1"/>
+            <Button Height="20" Width="50" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,26,998,-46" Grid.Column="1" Grid.Row="1" Background="{x:Null}" BorderBrush="{x:Null}">
+                <TextBlock Text="Logout" TextDecorations="Underline" FontSize="15" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+            </Button>
             <!--QUICK ADD CONTENT: SUPPLY BATCHES-->
             <StackPanel  VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" Margin="370,70,0,0">
                 <Border Background="#dcf4f4" Height="451" Width="474" BorderThickness="1" BorderBrush="#aac7c7">
@@ -115,10 +118,12 @@
                             </StackPanel>
                             
                         </Border>
-                        <Button Background="#9bdbdb" Height= "45" Width="235" Margin="-238,-825,0,0" BorderThickness="1" BorderBrush="#aac7c7">
-                            <TextBlock Text="CLIENT" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="73" Margin="74,10,86,9"/>
-                        </Button>
-                        <TextBlock Text="SUPPLY" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20" Width="100" Margin="314,-820,86,9"/>
+                        <Button Content="SUPPLIER" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Background="{x:Null}" Height= "45" Width="158" Margin="-314,-825,0,0" BorderThickness="1" BorderBrush="#aac7c7"/>
+
+                        <Button Content="SUPPLY" Background="#FF9BDBDB" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height= "45" Width="158" Margin="0.5,-825,0,0" BorderThickness="1" BorderBrush="#aac7c7"/>
+
+                        <Button Background="#dcf4f4" Content="SUPPLIER" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height= "45" Width="158" Margin="312,-825,0,0" BorderThickness="1" BorderBrush="#aac7c7"/>
+
                     </StackPanel>
 
                 </Border>

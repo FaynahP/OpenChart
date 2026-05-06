@@ -20,8 +20,10 @@
                 <ColumnDefinition Width="809*"/>
             </Grid.ColumnDefinitions>
             <!--TOP BAR-->
-            <Border Background="White" BorderBrush="DimGray" BorderThickness="1" Height="40" Width="1097" VerticalAlignment="Top" Margin="-7,-5.5,0,0" Grid.Column="1">
-                <Button Content="Logout" Height="20" Width="50" FontFamily="Gill Sans MT" FontWeight="Regular" HorizontalAlignment="Right" Margin="10,0,10,0"/>
+            <Border Background="White" BorderBrush="DimGray" BorderThickness="1" Height="40" Width="1097" VerticalAlignment="Top" Margin="-11,-5.5,0,0" Grid.Column="1">
+                <Button  Height="20" Width="50" FontFamily="Gill Sans MT" FontWeight="Regular" HorizontalAlignment="Right" Margin="10,0,10,0" Background="{x:Null}" BorderBrush="{x:Null}">
+                    <TextBlock Text="Logout" TextDecorations="Underline" FontSize="15" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+                </Button>
 
             </Border>
             <StackPanel HorizontalAlignment="Left" Margin="10,-4.5,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
@@ -35,10 +37,10 @@
             <!--NAVIGATION BAR-->
             <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="542.25" Width="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-73" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
             <!--AddButton-->
-            <Button Background="#9bdbdb" Height="50" Margin="6,45,953,394" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
-                <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Gill Sans MT" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0"/>
+            <Button Background="#9bdbdb" Height="50" Margin="3,45,953,394" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
+                <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Gill Sans MT" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0"/>
             </Button>
-            <Image Source="/Images/ICONS/PLUS.png" Margin="2,5,943,354" Height="30" Width="30" HorizontalAlignment="Left"  Grid.Column="1"/>
+            <Image Source="/Images/ICONS/PLUS.png" Margin="13,66,0,415" Width="15" HorizontalAlignment="Left"  Grid.Column="1"/>
 
 
             <!--Dashboard-->
@@ -51,8 +53,15 @@
 
                 </Button>
             </StackPanel>
-            <!--Clients-->
+            <!--Medicine-->
             <StackPanel Grid.ColumnSpan="2" Margin="-59,40,80,10" Grid.RowSpan="2">
+                <Image Source="/Images/ICONS/MEDICINE.png" Height="50" Width="25" Margin="0,150,900,-1"/>
+                <TextBlock Text="Medicine" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="70" Margin="0,-45,800,0" Height="17"/>
+                <Button  Command="{Binding MedicineCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
+                </Button>
+            </StackPanel>
+            <!--Clients-->
+            <StackPanel Grid.ColumnSpan="2" Margin="-59,95,80,10" Grid.RowSpan="2">
                 <Image Source="/Images/ICONS/CLIENTS.png" Height="50" Width="25" Margin="0,150,900,-1"/>
                 <TextBlock Text="Clients" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="70" Margin="0,-45,800,0" Height="17"/>
                 <Button  Command="{Binding ClientCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
@@ -60,7 +69,7 @@
                 </Button>
             </StackPanel>
             <!--Transactions-->
-            <StackPanel Grid.ColumnSpan="2" Margin="-59,45,80,10" Grid.RowSpan="2">
+            <StackPanel Grid.ColumnSpan="2" Margin="-59,100,80,10" Grid.RowSpan="2">
                 <Image Source="/Images/ICONS/REPORTS.png" Height="50" Width="25" Margin="0,203,900,-1"/>
                 <TextBlock Text="Transactions" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="72" Margin="2,-45,800,0" Height="17"/>
                 <Button  Command="{Binding TransCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
@@ -68,7 +77,7 @@
                 </Button>
             </StackPanel>
             <!--Supply Batch-->
-            <StackPanel Grid.ColumnSpan="2" Margin="-59,107,80,10" Grid.RowSpan="2">
+            <StackPanel Grid.ColumnSpan="2" Margin="-59,157,80,10" Grid.RowSpan="2">
                 <Image Source="/Images/ICONS/SUPPLY BATCH.png" Height="50" Width="25" Margin="0,203,899,-1"/>
                 <TextBlock Text="Supply Batch" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="73" Margin="5,-45,800,0" Height="17"/>
                 <Button  Command="{Binding SuBCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
@@ -76,14 +85,16 @@
                 </Button>
             </StackPanel>
             <!--Suppliers-->
-            <StackPanel Grid.ColumnSpan="2" Margin="-59,170,76,10" Grid.RowSpan="2">
+            <StackPanel Grid.ColumnSpan="2" Margin="-59,220,76,10" Grid.RowSpan="2">
                 <Image Source="/Images/ICONS/SUPPLIER.png" Height="50" Width="25" Margin="0,203,899,-1"/>
                 <TextBlock Text="Suppliers" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="73" Margin="8,-45,800,0" Height="17"/>
                 <Button  Command="{Binding SuppCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
 
                 </Button>
             </StackPanel>
-            <Button Content="Logout" Height="20" Width="50" FontFamily="Gill Sans MT" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,26,998,-46" Grid.Column="1" Grid.Row="1"/>
+            <Button Height="20" Width="50" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,26,998,-46" Grid.Column="1" Grid.Row="1" Background="{x:Null}" BorderBrush="{x:Null}">
+                <TextBlock Text="Logout" TextDecorations="Underline" FontSize="15" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+            </Button>
             <!--DASHBOARD CONTENT-->
             <TextBlock Text="{Binding CurrentUser.First_Name, StringFormat='Welcome, {0}!'}" FontSize="25" FontFamily="Century Gothic" FontWeight="ExtraBold" Height="30"  Grid.Column="1" Margin="170,37,617,436"/>
 
@@ -94,9 +105,11 @@
                     <TextBlock Text="TOTAL SUPPLIES" FontSize="18" FontFamily="Century Gothic" FontWeight="Bold" Margin="573,-330,-20,10" Height="30" Width="145"/>
                     <Line X1="-90" Y1="90" X2="-90" Y2="-90" Stroke="#b6bfbd" StrokeThickness="1" Margin="340,-95,-20,10" Grid.Column="1"/>
                     <Border Background="#9bdbdb" BorderBrush="#54b4b4" Height="130" Width="250" Margin="10,-170,-20,10" CornerRadius="3" BorderThickness="2">
-                        
+                        <TextBlock Text="NUM" FontSize="18" FontFamily="Century Gothic" FontWeight="Bold"  Height="30" Margin="101,49,96,47"/>
+
                     </Border>
                     <Border Background="#9bdbdb" BorderBrush="#54b4b4" Height="130" Width="250" Margin="550,-170,-20,10" CornerRadius="3" BorderThickness="2">
+                        <TextBlock Text="NUM" FontSize="18" FontFamily="Century Gothic" FontWeight="Bold"  Height="30" Margin="101,49,96,47"/>
 
                     </Border>
                 </StackPanel>
@@ -114,23 +127,66 @@
                 <ListView ItemsSource="{Binding supplyBatchList}" SelectedItem="{Binding SelectedSuB}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Product Name" DisplayMemberBinding="{Binding suBName}" Width="Auto"/>
-                            <GridViewColumn Header="Category" DisplayMemberBinding="{Binding suBName}" Width="Auto"/>
-                            <GridViewColumn Header="Stocks" DisplayMemberBinding="{Binding suBName}" Width="Auto"/>
+                            <GridViewColumn Header="Medicine ID" DisplayMemberBinding="{Binding suBName}" Width="210"/>
+                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding suBName}" Width="220"/>
+                            <GridViewColumn Header="Category" DisplayMemberBinding="{Binding suBName}" Width="220"/>
+                            <GridViewColumn Header="Batch ID" DisplayMemberBinding="{Binding suBName}" Width="210"/>
                         </GridView>
                     </ListView.View>
+                    <ListView.Resources>
+                        <Style TargetType="GridViewColumnHeader">
+                            <Setter Property="Background" Value="#9bdbdb"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                            <Setter Property="FontFamily" Value="Century Gothic"/>
+                            <Setter Property="FontSize" Value="12"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="Background" Value="#dcf4f4"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                            <Setter Property="FontFamily" Value="Century Gothic"/>
+                            <Setter Property="FontSize" Value="12"/>
+                            <Setter Property="FontWeight" Value="Regular"/>
+                        </Style>
+                        <Style TargetType="ListView">
+                            <Setter Property="Background" Value="#dcf4f4"/>
+                            <Setter Property="BorderBrush" Value="#aac7c7"/>
+                        </Style>
+                    </ListView.Resources>
                 </ListView>
             </Border>
-            <TextBlock Text="Recently Added" FontSize="18" FontFamily="Century Gothic" FontWeight="Bold"  Grid.Column="1" Margin="170,285,618,184"/>
+            <TextBlock Text="Recently Added" FontSize="15" FontFamily="Century Gothic" FontWeight="Bold" Foreground="#3a3a3a" Grid.Column="1" Margin="170,285,618,184"/>
             <Border x:Name="CLIENTGRID"  Background="#dcf4f4" Margin="169,427,49,-59" Height="115" BorderThickness="2" BorderBrush="#aac7c7" CornerRadius="5" Grid.Column="1" Grid.RowSpan="2">
                 <ListView ItemsSource="{Binding supplyBatchList}" SelectedItem="{Binding SelectedSuB}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Full Name" DisplayMemberBinding="{Binding suBName}" Width="Auto"/>
-                            <GridViewColumn Header="Product Name" DisplayMemberBinding="{Binding suBName}" Width="Auto"/>
-                            <GridViewColumn Header="Status" DisplayMemberBinding="{Binding suBName}" Width="Auto"/>
+                            <GridViewColumn Header="Client ID" DisplayMemberBinding="{Binding suBName}" Width="210"/>
+                            <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding suBName}" Width="220"/>
+                            <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding suBName}" Width="220"/>
+                            <GridViewColumn Header="Status" DisplayMemberBinding="{Binding suBName}" Width="210"/>
+
                         </GridView>
                     </ListView.View>
+                    <ListView.Resources>
+                        <Style TargetType="GridViewColumnHeader">
+                            <Setter Property="Background" Value="#9bdbdb"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                            <Setter Property="FontFamily" Value="Century Gothic"/>
+                            <Setter Property="FontSize" Value="12"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="Background" Value="#dcf4f4"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                            <Setter Property="FontFamily" Value="Century Gothic"/>
+                            <Setter Property="FontSize" Value="12"/>
+                            <Setter Property="FontWeight" Value="Regular"/>
+                        </Style>
+                        <Style TargetType="ListView">
+                            <Setter Property="Background" Value="#dcf4f4"/>
+                            <Setter Property="BorderBrush" Value="#aac7c7"/>
+                        </Style>
+                    </ListView.Resources>
                 </ListView>
             </Border>
 
