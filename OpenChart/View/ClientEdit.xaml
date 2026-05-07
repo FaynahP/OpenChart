@@ -11,95 +11,85 @@
     </Window.Background>
     <Viewbox Stretch="Uniform">
         <Grid Margin="0,0,0,62">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="29*"/>
-                <RowDefinition Height="31*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="191*"/>
-                <ColumnDefinition Width="809*"/>
-            </Grid.ColumnDefinitions>
             <!--TOP BAR-->
-            <Border Background="White" BorderBrush="DimGray" BorderThickness="1" Height="40" Width="1097" VerticalAlignment="Top" Margin="-9,-5.5,0,0" Grid.Column="1">
-                <Button  Height="20" Width="50" FontFamily="Gill Sans MT" FontWeight="Regular" HorizontalAlignment="Right" Margin="10,0,10,0" Background="{x:Null}" BorderBrush="{x:Null}">
-                    <TextBlock Text="Logout" TextDecorations="Underline" FontSize="15" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,0,0,0"/>
-                </Button>
+            <Border Background="White" Margin="0,-18,0,0" BorderBrush="DimGray" BorderThickness="1" Height="40" Width="1200" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                <StackPanel HorizontalAlignment="Left" Margin="10,0,0,0">
+                    <Button  Height="20" Width="50" FontFamily="Gill Sans MT" FontWeight="Regular" HorizontalAlignment="Right" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,9,-310,0">
+                        <TextBlock Text="Logout" TextDecorations="Underline" FontSize="15" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" />
+                    </Button>
+                    <Border Background="#9BDBDB" CornerRadius="6" Width="30" Height="30" Margin="0,-25,835,-2">
+                        <Image Source="/Images/ICONS/OCTempLogo.png" Height="35" Width="30" />
+                    </Border>
+                    <TextBlock Text="OpenChart" FontSize="20" FontFamily="Gill Sans MT" FontWeight="Bold" Width="111" Margin="0,-25,675,-2"/>
+                </StackPanel>
             </Border>
-            <StackPanel HorizontalAlignment="Left" Margin="10,-4.5,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                <Border Background="#9BDBDB" CornerRadius="6" Width="30" Height="30" Margin="0,3,825,-2">
-                    <Image Source="/Images/ICONS/OCTempLogo.png" Height="35" Width="30" />
-                </Border>
-                <TextBlock Text="OpenChart" FontSize="20" FontFamily="Gill Sans MT" FontWeight="Bold" Width="111" Margin="0,-25,675,-2"/>
-            </StackPanel>
 
 
             <!--NAVIGATION BAR-->
-            <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="554" Width="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-67" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="579.5" Width="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-80" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
             <!--AddButton-->
-            <Button Background="#9bdbdb" Height="50" Margin="3,45,953,394" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
-                <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Gill Sans MT" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0"/>
-            </Button>
-            <Image Source="/Images/ICONS/PLUS.png" Margin="13,66,0,415" Width="15" HorizontalAlignment="Left"  Grid.Column="1"/>
+            <StackPanel Margin="0,50,1050,0">
+                <Button Background="#9bdbdb" Height="50" Width="120" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
+                    <StackPanel>
+                        <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Gill Sans MT" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0"/>
+                        <Image Source="/Images/ICONS/PLUS.png"  Margin="10,-15,0,0" Width="15" HorizontalAlignment="Left"  Grid.Column="1"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
 
 
             <!--Dashboard-->
-            <Border Background="#54b4b4"  Opacity="0" Height="40" Width="5" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3,131,0,0"/>
+            <Border Background="#54b4b4"  Height="40" Width="5" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3,249,0,0"/>
             <StackPanel Grid.ColumnSpan="2" Margin="-59,0,80,10" Grid.RowSpan="2">
-                <Image Source="/Images/ICONS/DASHBOARD.png" Height="20" Width="20" Margin="0,140,900,-1"/>
-                <TextBlock Text="Dashboard" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold" Width="70" Height="17"  Margin="0,-15,802,0"/>
-                <Button  Command="{Binding DashCommand}" Opacity="0" BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="188.5" Margin="0,-30,0,0">
+                <Image Source="/Images/ICONS/DASHBOARD.png" Height="20" Width="20" Margin="0,140,1010,-1"/>
+                <Button  Command="{Binding DashCommand}" Content="Dashboard"  FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold" BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="148" Margin="60,-28,0,0" BorderBrush="{x:Null}" Background="{x:Null}">
 
 
                 </Button>
             </StackPanel>
             <!--Medicine-->
             <StackPanel Grid.ColumnSpan="2" Margin="-59,40,80,10" Grid.RowSpan="2">
-                <Image Source="/Images/ICONS/MEDICINE.png" Height="50" Width="25" Margin="0,150,900,-1"/>
-                <TextBlock Text="Medicine" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="70" Margin="0,-45,800,0" Height="17"/>
-                <Button  Command="{Binding MedicineCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
+                <Image Source="/Images/ICONS/MEDICINE.png" Height="50" Width="25" Margin="0,150,1010,-1"/>
+                <Button  Command="{Binding MedicineCommand}" Padding="0,0,20,0"  Content="Medicine" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold" BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="148" Margin="60,-50,0,0" Background="{x:Null}">
                 </Button>
             </StackPanel>
             <!--Clients-->
             <StackPanel Grid.ColumnSpan="2" Margin="-59,95,80,10" Grid.RowSpan="2">
-                <Image Source="/Images/ICONS/CLIENTS.png" Height="50" Width="25" Margin="0,150,900,-1"/>
-                <TextBlock Text="Clients" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="70" Margin="0,-45,800,0" Height="17"/>
-                <Button  Command="{Binding ClientCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
+                <Image Source="/Images/ICONS/CLIENTS.png" Height="50" Width="25" Margin="0,150,1010,-1"/>
+                <Button  Command="{Binding ClientCommand}" Content="Clients" Padding="0,0,25,0" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="148" Margin="60,-50,0,0" Background="{x:Null}">
 
                 </Button>
             </StackPanel>
             <!--Transactions-->
             <StackPanel Grid.ColumnSpan="2" Margin="-59,100,80,10" Grid.RowSpan="2">
-                <Image Source="/Images/ICONS/REPORTS.png" Height="50" Width="25" Margin="0,203,900,-1"/>
-                <TextBlock Text="Transactions" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="72" Margin="2,-45,800,0" Height="17"/>
-                <Button  Command="{Binding TransCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
+                <Image Source="/Images/ICONS/REPORTS.png" Height="50" Width="25" Margin="0,203,1010,-1"/>
+                <Button  Command="{Binding TransCommand}" Content="Transactions" Padding="0,0,-10,0" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="148" Margin="60,-50,0,0" Background="{x:Null}">
 
                 </Button>
             </StackPanel>
             <!--Supply Batch-->
             <StackPanel Grid.ColumnSpan="2" Margin="-59,157,80,10" Grid.RowSpan="2">
-                <Image Source="/Images/ICONS/SUPPLY BATCH.png" Height="50" Width="25" Margin="0,203,899,-1"/>
-                <TextBlock Text="Supply Batch" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="73" Margin="5,-45,800,0" Height="17"/>
-                <Button  Command="{Binding SuBCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
+                <Image Source="/Images/ICONS/SUPPLY BATCH.png" Height="50" Width="25" Margin="0,203,1010,-1"/>
+                <Button  Command="{Binding SuBCommand}" Content="Supply Batch" Padding="0,0,-10,0" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="148" Margin="60,-50,0,0" Background="{x:Null}">
 
                 </Button>
             </StackPanel>
             <!--Suppliers-->
             <StackPanel Grid.ColumnSpan="2" Margin="-59,220,76,10" Grid.RowSpan="2">
-                <Image Source="/Images/ICONS/SUPPLIER.png" Height="50" Width="25" Margin="0,203,899,-1"/>
-                <TextBlock Text="Suppliers" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  Width="73" Margin="8,-45,800,0" Height="17"/>
-                <Button  Command="{Binding SuppCommand}" Opacity="0"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="190.5" Margin="0,-50,0,0">
+                <Image Source="/Images/ICONS/SUPPLIER.png" Height="50" Width="25" Margin="0,203,1010,-1"/>
+                <Button  Command="{Binding SuppCommand}" Content="Suppliers" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold"  BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="148" Margin="60,-50,0,0" Background="{x:Null}">
 
                 </Button>
             </StackPanel>
-            <Button Height="20" Width="50" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,26,998,-46" Grid.Column="1" Grid.Row="1" Background="{x:Null}" BorderBrush="{x:Null}">
-                <TextBlock Text="Logout" TextDecorations="Underline" FontSize="15" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,0,0,0"/>
-            </Button>
-            <Button Height="20" Width="50" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,26,998,-46" Grid.Column="1" Grid.Row="1" Background="{x:Null}" BorderBrush="{x:Null}">
+            <!--Logout-->
+            <Button Height="20" Width="50" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,547,1105,-46" Grid.Column="1" Grid.Row="1" Background="{x:Null}" BorderBrush="{x:Null}">
                 <TextBlock Text="Logout" TextDecorations="Underline" FontSize="15" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,0,0,0"/>
             </Button>
 
-
-            <!--QUICK ADD CONTENT:CLIENT-->
+            <!--EDIT:CLIENT-->
             <StackPanel  VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" Margin="370,70,0,0">
                 <Border Background="#dcf4f4" Height="451" Width="474" BorderThickness="1" BorderBrush="#aac7c7">
                     <StackPanel>
