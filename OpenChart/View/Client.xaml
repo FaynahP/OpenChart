@@ -32,23 +32,21 @@
                 <TextBlock Text="OpenChart" FontSize="20" FontFamily="Gill Sans MT" FontWeight="Bold" Width="111" Margin="0,-25,675,-2"/>
             </StackPanel>
 
-
             <!--NAVIGATION BAR-->
-            <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="524" Width="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-69" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="530" Width="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-75" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
             <!--AddButton-->
-            <Button Background="#9bdbdb" Height="50" Margin="6,45,953,394" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
-                <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Gill Sans MT" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0"/>
+            <Button Background="#9bdbdb" Height="50" Margin="3,45,953,394" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
+                <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Gill Sans MT" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0"/>
             </Button>
-            <Image Source="/Images/ICONS/PLUS.png" Margin="2,5,943,354" Height="30" Width="30" HorizontalAlignment="Left"  Grid.Column="1"/>
+            <Image Source="/Images/ICONS/PLUS.png" Margin="13,66,0,415" Width="15" HorizontalAlignment="Left"  Grid.Column="1"/>
 
 
             <!--Dashboard-->
-            <Border Background="#54b4b4"  Height="40" Width="5" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3,194,0,0"/>
+            <Border Background="#54b4b4"  Height="40" Width="5" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3,249,0,0"/>
             <StackPanel Grid.ColumnSpan="2" Margin="-59,0,80,10" Grid.RowSpan="2">
                 <Image Source="/Images/ICONS/DASHBOARD.png" Height="20" Width="20" Margin="0,140,900,-1"/>
                 <TextBlock Text="Dashboard" FontSize="12" FontFamily="Gill Sans MT" FontWeight="UltraBold" Width="70" Height="17"  Margin="0,-15,802,0"/>
                 <Button  Command="{Binding DashCommand}" Opacity="0" BorderThickness="0" HorizontalAlignment="Left" Height="40" Width="188.5" Margin="0,-30,0,0">
-
 
                 </Button>
             </StackPanel>
@@ -97,6 +95,60 @@
             <Button Height="20" Width="50" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,26,998,-46" Grid.Column="1" Grid.Row="1" Background="{x:Null}" BorderBrush="{x:Null}">
                 <TextBlock Text="Logout" TextDecorations="Underline" FontSize="15" FontFamily="Gill Sans MT Condensed" FontWeight="Regular" HorizontalAlignment="Right" Margin="0,0,0,0"/>
             </Button>
+            <!--CLIENT CONTENT-->
+            <StackPanel Grid.Column="1" Margin="0,15,0,0">
+                <TextBox    Foreground="#b6bfbd"  FontFamily="Gill Sans MT" Grid.Column="1" Height="20" Width="150"  Margin="179,112,759,337" />
+                <TextBlock Foreground="#6c6c6c" FontWeight="Medium" FontFamily="Gill Sans MT" Text="Search" Height="20" Width="40" Margin="-690,-740,0,0"/>
+                <ComboBox Background="White" BorderBrush="#aac7c7" Height="20" Width="100" Margin="-200,-694,0,0" />
+                <ComboBox Background="White" BorderBrush="#aac7c7" Height="20" Width="100" Margin="20,-694,0,0" />
+                <TextBlock Foreground="#6c6c6c" FontWeight="Medium" FontFamily="Gill Sans MT" Text="Sort By" Height="20" Width="40" Margin="-260,-740,0,0"/>
+                <Button Height="20" Width="20" Margin="-400,-694,0,0" Background="#9bdbdb" BorderThickness="0.25" BorderBrush="#3f989c" >
+                    <Image Source="/Images/ICONS/SEARCH.png"/>
+                </Button>
+                <Button Height="30" Width="100" Content="EDIT" FontFamily="Century Gothic" FontWeight="Bold" Background="#9bdbdb" BorderBrush="#aac7c7" BorderThickness="0.5" Margin="0,-693,-920,0"/>
+            </StackPanel>
+            <TextBlock Text="CLIENTS" FontFamily="Century Gothic" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" Margin="120,-360,0,0"/>
+            <Border Background="#dcf4f4" CornerRadius="3" BorderBrush="#aac7c7" BorderThickness="2" Height="375" Width="876" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Column="1" Margin="179,0,0,-61" Grid.RowSpan="2" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="133*"/>
+                        <ColumnDefinition Width="303*"/>
+                    </Grid.ColumnDefinitions>
+                    <ListView Grid.ColumnSpan="2">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Client ID" DisplayMemberBinding="{Binding suBName}" Width="100"/>
+                                <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding suBName}" Width="170"/>
+                                <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding suBName}" Width="170"/>
+                                <GridViewColumn Header="Contact Number" DisplayMemberBinding="{Binding suBName}" Width="165"/>
+                                <GridViewColumn Header="Emergency Contact" DisplayMemberBinding="{Binding suBName}" Width="165"/>
+                                <GridViewColumn Header="Status" DisplayMemberBinding="{Binding suBName}" Width="100"/>
+                            </GridView>
+                        </ListView.View>
+                        <ListView.Resources>
+                            <Style TargetType="GridViewColumnHeader">
+                                <Setter Property="Background" Value="#9bdbdb"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Setter Property="FontFamily" Value="Century Gothic"/>
+                                <Setter Property="FontSize" Value="12"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                            </Style>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="Background" Value="#dcf4f4"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Setter Property="FontFamily" Value="Century Gothic"/>
+                                <Setter Property="FontSize" Value="12"/>
+                                <Setter Property="FontWeight" Value="Regular"/>
+                            </Style>
+                            <Style TargetType="ListView">
+                                <Setter Property="Background" Value="#dcf4f4"/>
+                                <Setter Property="BorderBrush" Value="#aac7c7"/>
+                            </Style>
+                        </ListView.Resources>
+                    </ListView>
+                </Grid>
+            </Border>
+            <Line X1="826" Y1="50" X2="-50" Y2="50" Width="850" Stroke="#b6bfbd"  StrokeThickness="1" HorizontalAlignment="Left" Grid.Column="1" Margin="229,45,0,0" VerticalAlignment="Top" Height="120"/>
 
         </Grid>
     </Viewbox>

@@ -36,10 +36,10 @@
             <!--NAVIGATION BAR-->
             <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="556" Width="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-69" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
             <!--AddButton-->
-            <Button Background="#9bdbdb" Height="50" Margin="6,45,953,394" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
-                <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Gill Sans MT" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0"/>
+            <Button Background="#9bdbdb" Height="50" Margin="3,45,953,394" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
+                <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Gill Sans MT" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0"/>
             </Button>
-            <Image Source="/Images/ICONS/PLUS.png" Margin="2,5,943,354" Height="30" Width="30" HorizontalAlignment="Left"  Grid.Column="1"/>
+            <Image Source="/Images/ICONS/PLUS.png" Margin="13,66,0,415" Width="15" HorizontalAlignment="Left"  Grid.Column="1"/>
 
 
             <!--Dashboard-->
@@ -103,11 +103,7 @@
                                 </StackPanel>
                                 <StackPanel Margin="200,-281,10,10" HorizontalAlignment="Left">
                                     <TextBox Height="20" Width="200"/>
-                                    <ComboBox Height="20" Width="200" Margin="0,30,0,0" Background="White">
-                                        <ComboBoxItem Content="Category 1"/>
-                                        <ComboBoxItem Content="Category 2"/>
-                                        <ComboBoxItem Content="Category 3"/>
-                                    </ComboBox>
+                                    <ComboBox Height="20" Width="200" Margin="0,30,0,0" Background="White"/>
                                     <TextBox Height="20" Width="200" Margin="0,30,0,0"/>
                                     <TextBox Height="20" Width="200" Margin="0,30,0,0"/>
                                     <TextBox Height="20" Width="200" Margin="0,30,0,0"/>
@@ -118,11 +114,11 @@
                             </StackPanel>
                             
                         </Border>
-                        <Button Content="SUPPLIER" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Background="{x:Null}" Height= "45" Width="158" Margin="-314,-825,0,0" BorderThickness="1" BorderBrush="#aac7c7"/>
+                        <Button Content="CLIENT" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Background="{x:Null}" Height= "45" Width="158" Margin="-314,-825,0,0" BorderThickness="1" BorderBrush="#aac7c7"/>
 
                         <Button Content="SUPPLY" Background="#FF9BDBDB" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height= "45" Width="158" Margin="0.5,-825,0,0" BorderThickness="1" BorderBrush="#aac7c7"/>
 
-                        <Button Background="#dcf4f4" Content="SUPPLIER" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height= "45" Width="158" Margin="312,-825,0,0" BorderThickness="1" BorderBrush="#aac7c7"/>
+                        <Button Background="#dcf4f4" Content="SUPPLIER" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height= "45" Width="158" Margin="314,-826,0,0" BorderThickness="1" BorderBrush="#aac7c7"/>
 
                     </StackPanel>
 

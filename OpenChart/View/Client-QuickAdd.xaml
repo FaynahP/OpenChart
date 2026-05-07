@@ -36,10 +36,10 @@
             <!--NAVIGATION BAR-->
             <Border Background="#dcf4f4" BorderBrush="DimGray" BorderThickness="1" Height="554" Width="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-67" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
             <!--AddButton-->
-            <Button Background="#9bdbdb" Height="50" Margin="6,45,953,394" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
-                <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Gill Sans MT" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0"/>
+            <Button Background="#9bdbdb" Height="50" Margin="3,45,953,394" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
+                <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Gill Sans MT" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0"/>
             </Button>
-            <Image Source="/Images/ICONS/PLUS.png" Margin="2,5,943,354" Height="30" Width="30" HorizontalAlignment="Left"  Grid.Column="1"/>
+            <Image Source="/Images/ICONS/PLUS.png" Margin="13,66,0,415" Width="15" HorizontalAlignment="Left"  Grid.Column="1"/>
 
 
             <!--Dashboard-->
