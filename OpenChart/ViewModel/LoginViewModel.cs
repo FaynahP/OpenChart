@@ -76,6 +76,7 @@ namespace OpenChart.ViewModel
             {
                var DashboardViewModel = new DashboardViewModel(CurrentUser);
                var login = new View.Dashboard();
+                login.Show();
                 //MessageBox.Show("Login successful!", "Success",
                 //        MessageBoxButton.OK, MessageBoxImage.Information);
             }
