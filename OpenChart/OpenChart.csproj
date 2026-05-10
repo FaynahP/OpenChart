@@ -181,6 +181,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\CategoryModel.cs" />
     <Compile Include="Model\ClientModel.cs" />
     <Compile Include="Model\SupplierModel.cs" />
     <Compile Include="Model\SupplyModel.cs" />

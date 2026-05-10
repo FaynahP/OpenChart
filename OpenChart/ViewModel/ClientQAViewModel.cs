@@ -18,7 +18,7 @@ namespace OpenChart.ViewModel
         public ClientModel addClient { get; set; }
         public UserModel CurrentUser { get; set; }
 
-        public ICommand QA_SupplyCommand { get; set; }
+        //public ICommand QA_SupplyCommand { get; set; }
         public ICommand QA_SupplierCommand { get; set; }
 
 
@@ -32,7 +32,7 @@ namespace OpenChart.ViewModel
             CurrentUser = currentuser;
             AddClientCommand = new AsyncRelayCommand(ExecuteAddClient);
             CancelAddClient = new RelayCommand(ExecuteCancelAddClient);
-            QA_SupplyCommand = new RelayCommand(MoveToQA_Supply);
+            //QA_SupplyCommand = new RelayCommand(MoveToQA_Supply);
             QA_SupplierCommand = new RelayCommand(MoveToQA_Supplier);
         }
 
@@ -103,15 +103,15 @@ namespace OpenChart.ViewModel
             window?.Close();
         }
 
-        private void MoveToQA_Supply(object parameter)
-        {
-            var window = parameter as Window;
-            var supplyQAViewModel = new SupplyQAViewModel(CurrentUser);
-            var supplyQAWindow = new View.Supply_QuickAdd();
-            supplyQAWindow.DataContext = supplyQAViewModel;
-            supplyQAWindow.Show();
-            window?.Close();
-        }
+        //private void MoveToQA_Supply(object parameter)
+        //{
+        //    var window = parameter as Window;
+        //    var supplyQAViewModel = new SupplyQAViewModel(CurrentUser);
+        //    var supplyQAWindow = new View.Supply_QuickAdd();
+        //    supplyQAWindow.DataContext = supplyQAViewModel;
+        //    supplyQAWindow.Show();
+        //    window?.Close();
+        //}
 
 
         private void MoveToQA_Supplier(object parameter)

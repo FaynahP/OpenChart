@@ -105,11 +105,14 @@
                                             <TextBlock Text="Email Address" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="0,60,0,0" Width="150"/>
                                         </StackPanel>
                                         <StackPanel Margin="200,-190,10,10" HorizontalAlignment="Left">
-                                            <TextBox Height="20" Width="200"/>
-                                            <TextBox Height="20" Width="200" Margin="0,60,0,0"/>
-                                            <TextBox Height="20" Width="200" Margin="0,60,0,0"/>
+                                            <TextBox Height="20" Width="200" 
+                                                     Text="{Binding addSupplier.Supp_Name, UpdateSourceTrigger=PropertyChanged}"/>
+                                            <TextBox Height="20" Width="200" Margin="0,60,0,0" 
+                                                     Text="{Binding addSupplier.Contact_Number, UpdateSourceTrigger=PropertyChanged}"/>
+                                            <TextBox Height="20" Width="200" Margin="0,60,0,0" 
+                                                     Text="{Binding addSupplier.Email_Address, UpdateSourceTrigger=PropertyChanged}"/>
                                         </StackPanel>
-                                        <Button Content="ADD SUPPLIER" Height="40" Width="100" HorizontalAlignment="Right" Margin="0,30,160,0" Background="#9bdbdb" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
+                                        <Button Content="ADD SUPPLIER" Command="{Binding AddSupplierCommand}" Height="40" Width="100" HorizontalAlignment="Right" Margin="0,30,160,0" Background="#9bdbdb" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
                                         <Button Content="CANCEL" Height="40" Width="90" HorizontalAlignment="Right" Margin="0,-40,50,0" Background="#c1f0f0" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
                                     </StackPanel>
 
@@ -117,8 +120,6 @@
                                 <Button Content="ADD SUPPLY" Height="40" Width="90" HorizontalAlignment="Right" Margin="0,10,160,0" Background="#9bdbdb" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
                                 <Button Content="CANCEL" Height="40" Width="90" HorizontalAlignment="Right" Margin="0,-40,50,0" Background="#c1f0f0" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
                             </StackPanel>
-
-
                         </Border>
                         <Button Background="{x:Null}" Content="CLIENT" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height= "45" Width="158" Margin="-315,-826,0,0" BorderThickness="1" BorderBrush="#aac7c7">
                         </Button>
