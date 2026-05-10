@@ -50,7 +50,12 @@
             </Grid>
 
 
-            <Button x:Name="Loginbutton"   Command= "{Binding LoginCommand}" CommandParameter="{Binding ElementName=Passwordbx}"  Grid.Row="2" Height="30" FontFamily="Lucida Console" FontWeight="Bold" Margin="96,34,441,82">
+            <Button x:Name="Loginbutton"   
+                    Command= "{Binding LoginCommand}" 
+                    CommandParameter="{Binding ElementName=Passwordbx}"  
+                    Grid.Row="2" Height="30" 
+                    FontFamily="Lucida Console" 
+                    FontWeight="Bold" Margin="96,34,441,82">
                 <Button.BorderBrush>
                     <SolidColorBrush Color="Blue" Opacity="100"/>
                 </Button.BorderBrush>

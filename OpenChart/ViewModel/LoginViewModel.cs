@@ -31,7 +31,7 @@ namespace OpenChart.ViewModel
                 CurrentUser.Password = password.Password;   
             }
 
-            string connectionString = /*@"Data Source=XIAN;Initial Catalog=OpenChart;Trusted_Connection=True;TrustServerCertificate=True;"*/ @"Data Source=MWEZ\MSSQLSERVER2022;Initial Catalog=OpenChartDatabase;Trusted_Connection=True;TrustServerCertificate=True;";
+            string connectionString = @"Data Source=XIAN;Initial Catalog=OpenChartDB;Trusted_Connection=True;TrustServerCertificate=True;";
 
             //seania's: @"Data Source=XIAN;Initial Catalog=OpenChart;Trusted_Connection=True;TrustServerCertificate=True;"
             //hannah's: @"Data Source=MWEZ\MSSQLSERVER2022;Initial Catalog=OpenChartDatabase;Trusted_Connection=True;TrustServerCertificate=True;"
@@ -42,12 +42,12 @@ namespace OpenChart.ViewModel
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT * FROM Users WHERE Username = @username AND Password = @password";
+                    string query = "SELECT * FROM Users WHERE User_ID = @userID AND Password = @password";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
 
-                        command.Parameters.AddWithValue("@username", CurrentUser.UserName);
+                        command.Parameters.AddWithValue("@userID", CurrentUser.UserName);
                         command.Parameters.AddWithValue("@password", CurrentUser.Password);
                         await connection.OpenAsync();
 
@@ -74,9 +74,10 @@ namespace OpenChart.ViewModel
 
             if (isLoginValid)
             {
-               
-                MessageBox.Show("Login successful!", "Success",
-                        MessageBoxButton.OK, MessageBoxImage.Information);
+               var DashboardViewModel = new DashboardViewModel(CurrentUser);
+               var login = new View.Dashboard();
+                //MessageBox.Show("Login successful!", "Success",
+                //        MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
