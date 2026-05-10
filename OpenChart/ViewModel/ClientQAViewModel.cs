@@ -14,11 +14,12 @@ namespace OpenChart.ViewModel
 {
     public class ClientQAViewModel : ObservableObject
     {
-
-
         public static ObservableCollection<ClientModel> Clients { get; set; }
         public ClientModel addClient { get; set; }
         public UserModel CurrentUser { get; set; }
+
+        public ICommand QA_SupplyCommand { get; set; }
+        public ICommand QA_SupplierCommand { get; set; }
 
 
         public ICommand AddClientCommand { get; set; }
@@ -31,7 +32,8 @@ namespace OpenChart.ViewModel
             CurrentUser = currentuser;
             AddClientCommand = new AsyncRelayCommand(ExecuteAddClient);
             CancelAddClient = new RelayCommand(ExecuteCancelAddClient);
-
+            QA_SupplyCommand = new RelayCommand(MoveToQA_Supply);
+            QA_SupplierCommand = new RelayCommand(MoveToQA_Supplier);
         }
 
         public async Task ExecuteAddClient(object parameter)
@@ -98,6 +100,27 @@ namespace OpenChart.ViewModel
             var dashboardWindow = new View.Dashboard();
             dashboardWindow.DataContext = dashboardViewModel;
             dashboardWindow.Show();
+            window?.Close();
+        }
+
+        private void MoveToQA_Supply(object parameter)
+        {
+            var window = parameter as Window;
+            var supplyQAViewModel = new SupplyQAViewModel(CurrentUser);
+            var supplyQAWindow = new View.Supply_QuickAdd();
+            supplyQAWindow.DataContext = supplyQAViewModel;
+            supplyQAWindow.Show();
+            window?.Close();
+        }
+
+
+        private void MoveToQA_Supplier(object parameter)
+        {
+            var window = parameter as Window;
+            var supplierQAViewModel = new SupplierQAViewModel(CurrentUser);
+            var supplierQAWindow = new View.Supplier_QuickAdd();
+            supplierQAWindow.DataContext = supplierQAViewModel;
+            supplierQAWindow.Show();
             window?.Close();
         }
     }

@@ -123,10 +123,10 @@
                         </Border>
                         <Button Background="#9bdbdb" Content="CLIENT" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height= "45" Width="158" Margin="-315,-826,0,0" BorderThickness="1" BorderBrush="#aac7c7">
                         </Button>
-                        <Button Background="#dcf4f4" Content="SUPPLY" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height= "45" Width="158" Margin="0.5,-826,0,0" BorderThickness="1" BorderBrush="#aac7c7">
+                        <Button Background="#dcf4f4" Content="SUPPLY" Command="{Binding QA_SupplyCommand}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height= "45" Width="158" Margin="0.5,-826,0,0" BorderThickness="1" BorderBrush="#aac7c7">
                            
                         </Button>
-                        <Button Background="#dcf4f4" Content="SUPPLIER" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height= "45" Width="158" Margin="315,-826,0,0" BorderThickness="1" BorderBrush="#aac7c7">
+                        <Button Background="#dcf4f4" Content="SUPPLIER" Command="{Binding QA_SupplierCommand}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}" FontSize="18" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height= "45" Width="158" Margin="315,-826,0,0" BorderThickness="1" BorderBrush="#aac7c7">
                         </Button>
                     </StackPanel>
 

@@ -182,6 +182,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Model\ClientModel.cs" />
+    <Compile Include="Model\SupplierModel.cs" />
+    <Compile Include="Model\SupplyModel.cs" />
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="ViewModel\AsyncRelayCommand.cs" />
     <Compile Include="ViewModel\ClientQAViewModel.cs" />
@@ -189,6 +191,8 @@
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\ObservableObject.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\SupplierQAViewModel.cs" />
+    <Compile Include="ViewModel\SupplyQAViewModel.cs" />
     <Compile Include="View\ClientEdit.xaml.cs">
       <DependentUpon>ClientEdit.xaml</DependentUpon>
     </Compile>

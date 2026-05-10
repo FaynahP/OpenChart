@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OpenChart.View"
         mc:Ignorable="d"
-        Title="Supply_QuickAdd" Height="450" Width="800">
+        Title="Supply_QuickAdd" WindowState="Maximized" WindowStyle="SingleBorderWindow" Height="450" Width="800">
      <Window.Background>
      <SolidColorBrush Color="#f0f2f2"/>
  </Window.Background>
