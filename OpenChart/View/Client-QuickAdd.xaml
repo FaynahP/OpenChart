@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OpenChart.View"
         mc:Ignorable="d"
-        Title="Client_QuickAdd" Height="450" Width="800">
+        Title="Client_QuickAdd" WindowState="Maximized" WindowStyle="SingleBorderWindow" Height="450" Width="800">
     <Window.Background>
         <SolidColorBrush Color="#f0f2f2"/>
     </Window.Background>
@@ -106,13 +106,13 @@
                                             <TextBlock Text="Emergency Contact" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="0,50,0,0" Width="150"/>
                                         </StackPanel>
                                         <StackPanel Margin="200,-240,10,10" HorizontalAlignment="Left">
-                                            <TextBox Height="20" Width="200"/>
-                                            <TextBox Height="20" Width="200" Margin="0,50,0,0"/>
-                                            <TextBox Height="20" Width="200" Margin="0,50,0,0"/>
-                                            <TextBox Height="20" Width="200" Margin="0,50,0,0"/>
+                                            <TextBox Height="20" Width="200" Text="{Binding addClient.Client_FName, UpdateSourceTrigger=PropertyChanged}"/>
+                                            <TextBox Height="20" Width="200" Margin="0,50,0,0" Text="{Binding addClient.Client_LName, UpdateSourceTrigger=PropertyChanged}"/>
+                                            <TextBox Height="20" Width="200" Margin="0,50,0,0" Text="{Binding addClient.Contact_Number, UpdateSourceTrigger=PropertyChanged}"/>
+                                            <TextBox Height="20" Width="200" Margin="0,50,0,0" Text="{Binding addClient.Emergency_Contact, UpdateSourceTrigger=PropertyChanged}"/>
                                         </StackPanel>
-                                        <Button Content="ADD CLIENT" Height="40" Width="90" HorizontalAlignment="Right" Margin="0,20,160,0" Background="#9bdbdb" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
-                                        <Button Content="CANCEL" Height="40" Width="90" HorizontalAlignment="Right" Margin="0,-40,50,0" Background="#c1f0f0" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
+                                        <Button Content="ADD CLIENT" Command="{Binding AddClientCommand}" Height="40" Width="90" HorizontalAlignment="Right" Margin="0,20,160,0" Background="#9bdbdb" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
+                                        <Button Content="CANCEL" Command="{Binding CancelAddClient}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}" Height="40" Width="90" HorizontalAlignment="Right" Margin="0,-40,50,0" Background="#c1f0f0" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
                                     </StackPanel>
 
                                 </Border>

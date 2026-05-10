@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OpenChart.View"
         mc:Ignorable="d"
-        Title="Dashboard" Height="450" Width="800">
+        Title="Dashboard" WindowState="Maximized" WindowStyle="SingleBorderWindow" Height="450" Width="800" >
     <Window.Background>
         <SolidColorBrush Color="#f0f2f2"/>
     </Window.Background>
@@ -31,7 +31,9 @@
 
             <!--AddButton-->
             <StackPanel Margin="0,55,1055,0">
-                <Button Background="#9bdbdb" Height="50" Width="120" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
+                <Button Command="{Binding QA_ClientCommand}" 
+                        CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+                        Background="#9bdbdb" Height="50" Width="120" BorderThickness="2" BorderBrush="#43989b" Grid.ColumnSpan="2" >
                     <StackPanel>
                         <TextBlock Text="QUICK ADD" FontSize="12" FontFamily="Gill Sans MT" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0"/>
                         <Image Source="/Images/ICONS/PLUS.png"  Margin="10,-15,0,0" Width="15" HorizontalAlignment="Left"  Grid.Column="1"/>
