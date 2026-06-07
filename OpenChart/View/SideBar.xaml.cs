@@ -12,16 +12,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace OpenChart.View.Staff
+namespace OpenChart.View
 {
     /// <summary>
-    /// Interaction logic for Client.xaml
+    /// Interaction logic for SideBar.xaml
     /// </summary>
-    public partial class Client : Window
+    public partial class SideBar : Window
     {
-        public Client()
+        public SideBar()
         {
             InitializeComponent();
         }
+
+     
     }
 }

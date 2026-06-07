@@ -97,7 +97,7 @@ namespace OpenChart.ViewModel
 
             var window = parameter as Window;
             var dashboardViewModel = new DashboardViewModel(CurrentUser);
-            var dashboardWindow = new View.Dashboard();
+            var dashboardWindow = new View.Staff.Dashboard();
             dashboardWindow.DataContext = dashboardViewModel;
             dashboardWindow.Show();
             window?.Close();

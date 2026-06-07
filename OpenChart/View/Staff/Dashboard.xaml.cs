@@ -12,20 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace OpenChart.View
+namespace OpenChart.View.Staff
 {
-    /// <summary>
-    /// Interaction logic for Dashboard.xaml
-    /// </summary>
+    
     public partial class Dashboard : Window
     {
         public Dashboard()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click()
-        {
 
         }
     }

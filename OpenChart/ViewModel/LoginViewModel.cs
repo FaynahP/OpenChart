@@ -83,7 +83,7 @@ namespace OpenChart.ViewModel
             if (isLoginValid)
             {
                var DashboardViewModel = new DashboardViewModel(CurrentUser);
-               var login = new View.Dashboard();
+               var login = new View.Staff.Dashboard();
                 
                 
                 login.DataContext = DashboardViewModel;

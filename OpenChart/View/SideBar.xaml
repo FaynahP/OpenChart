@@ -1,0 +1,17 @@
+﻿<Window x:Class="OpenChart.View.SideBar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OpenChart.View"
+        mc:Ignorable="d"
+        Title="SideBar" Height="450" Width="800">
+    <Grid>
+        <Path Stretch="Uniform" VerticalAlignment="Top" Fill="Brown" Height="100" Data=" "/>
+        <ListBoxItem x:Name="sidebar" BorderThickness="0">
+
+        </ListBoxItem>
+        <Frame x:Name="frame" Background="LightGray" Margin="80,40,0,0"/>
+        
+    </Grid>
+</Window>

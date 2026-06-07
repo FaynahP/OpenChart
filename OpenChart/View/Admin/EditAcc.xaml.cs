@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace OpenChart.View.Staff
+namespace OpenChart.View.Admin
 {
     /// <summary>
-    /// Interaction logic for Client.xaml
+    /// Interaction logic for EditAcc.xaml
     /// </summary>
-    public partial class Client : Window
+    public partial class EditAcc : Window
     {
-        public Client()
+        public EditAcc()
         {
             InitializeComponent();
         }

@@ -31,8 +31,8 @@
                 </StackPanel>
             </Border>
             <StackPanel Margin="0,0,-80,0">
-                <TextBlock Text="Already have an account?" Height="10" Width="140" Margin="-450,300,0,0" FontSize="10" FontFamily="Cascadia Mono" FontWeight="Bold" Foreground="Black"/>
-                <Button Content="Sign In" Command="{Binding ExecuteGoToLogin}" Width="50" Height="20" Margin="-250,-15,0,0" FontSize="10" FontFamily="Cascadia Mono" FontWeight="Bold" Foreground="Blue" Background="Transparent" BorderThickness="0"/>
+                <TextBlock Text="Don't have an account?" Height="12" Width="140" Margin="-450,300,0,0" FontSize="10" FontFamily="Cascadia Mono" FontWeight="Bold" Foreground="Black"/>
+                <Button Content="Sign Up" Command="{Binding ExecuteGoToLogin}" Width="50" Height="20" Margin="-250,-17,0,0" FontSize="10" FontFamily="Cascadia Mono" FontWeight="Bold" Foreground="Blue" Background="Transparent" BorderThickness="0"/>
             </StackPanel>
             <Button x:Name="SignUpButton"
                   Content="Login"
