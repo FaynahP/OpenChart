@@ -186,6 +186,7 @@
     <Compile Include="Model\SupplierModel.cs" />
     <Compile Include="Model\SupplyModel.cs" />
     <Compile Include="Model\UserModel.cs" />
+    <Compile Include="ViewModel\NavButton.cs" />
     <Compile Include="ViewModel\AsyncRelayCommand.cs" />
     <Compile Include="ViewModel\ClientQAViewModel.cs" />
     <Compile Include="ViewModel\DashboardViewModel.cs" />
@@ -194,46 +195,49 @@
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\SupplierQAViewModel.cs" />
     <Compile Include="ViewModel\SupplyQAViewModel.cs" />
-    <Compile Include="View\ClientEdit.xaml.cs">
+    <Compile Include="View\Staff\ClientEdit.xaml.cs">
       <DependentUpon>ClientEdit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Client-QuickAdd.xaml.cs">
+    <Compile Include="View\InvHandlers\Client-QuickAdd.xaml.cs">
       <DependentUpon>Client-QuickAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Client.xaml.cs">
+    <Compile Include="View\Staff\Client.xaml.cs">
       <DependentUpon>Client.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Dashboard.xaml.cs">
+    <Compile Include="View\Staff\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Login.xaml.cs">
+    <Compile Include="View\GettingIn\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Medicine.xaml.cs">
+    <Compile Include="View\GettingIn\SignUp.xaml.cs">
+      <DependentUpon>SignUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\Medicine.xaml.cs">
       <DependentUpon>Medicine.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\MedicineEdit.xaml.cs">
+    <Compile Include="View\Staff\MedicineEdit.xaml.cs">
       <DependentUpon>MedicineEdit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Supplier-QuickAdd.xaml.cs">
+    <Compile Include="View\InvHandlers\Supplier-QuickAdd.xaml.cs">
       <DependentUpon>Supplier-QuickAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Suppliers.xaml.cs">
+    <Compile Include="View\Staff\Suppliers.xaml.cs">
       <DependentUpon>Suppliers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Supply-QuickAdd.xaml.cs">
+    <Compile Include="View\InvHandlers\Supply-QuickAdd.xaml.cs">
       <DependentUpon>Supply-QuickAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SupplyBatches.xaml.cs">
+    <Compile Include="View\Staff\SupplyBatches.xaml.cs">
       <DependentUpon>SupplyBatches.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SupplyEdit.xaml.cs">
+    <Compile Include="View\Staff\SupplyEdit.xaml.cs">
       <DependentUpon>SupplyEdit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Transactions.xaml.cs">
+    <Compile Include="View\Staff\Transactions.xaml.cs">
       <DependentUpon>Transactions.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\TransactionsEdit.xaml.cs">
+    <Compile Include="View\Staff\TransactionsEdit.xaml.cs">
       <DependentUpon>TransactionsEdit.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -269,59 +273,67 @@
     <Resource Include="Images\ICONS\OCTempLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="View\ClientEdit.xaml">
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Staff\ClientEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Client-QuickAdd.xaml">
+    <Page Include="View\InvHandlers\Client-QuickAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Client.xaml">
+    <Page Include="View\Staff\Client.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Dashboard.xaml">
+    <Page Include="View\Staff\Dashboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Login.xaml">
+    <Page Include="View\GettingIn\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Medicine.xaml">
+    <Page Include="View\GettingIn\SignUp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\MedicineEdit.xaml">
+    <Page Include="View\Staff\Medicine.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Supplier-QuickAdd.xaml">
+    <Page Include="View\Staff\MedicineEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Suppliers.xaml">
+    <Page Include="View\InvHandlers\Supplier-QuickAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Supply-QuickAdd.xaml">
+    <Page Include="View\Staff\Suppliers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\SupplyBatches.xaml">
+    <Page Include="View\InvHandlers\Supply-QuickAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\SupplyEdit.xaml">
+    <Page Include="View\Staff\SupplyBatches.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Transactions.xaml">
+    <Page Include="View\Staff\SupplyEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\TransactionsEdit.xaml">
+    <Page Include="View\Staff\Transactions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Staff\TransactionsEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -348,6 +360,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\ICONS\SEARCH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ICONS\GOOGLE.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\Admin\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.AnalysisServices.AdomdClient.retail.amd64.19.84.1\build\net45\Microsoft.AnalysisServices.AdomdClient.retail.amd64.targets" Condition="Exists('..\packages\Microsoft.AnalysisServices.AdomdClient.retail.amd64.19.84.1\build\net45\Microsoft.AnalysisServices.AdomdClient.retail.amd64.targets')" />

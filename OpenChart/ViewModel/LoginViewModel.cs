@@ -17,10 +17,20 @@ namespace OpenChart.ViewModel
 
         public ICommand LoginCommand { get; set; }
 
+        public ICommand GoToLogin { get; set; }
+
         public LoginViewModel()
         {
             CurrentUser = new UserModel();
             LoginCommand = new RelayCommand(ExecuteLogin);
+            GoToLogin = new RelayCommand(ExecuteGoToLogin);
+        }
+
+        private void ExecuteGoToLogin(object parameter)
+        {
+            var login = new View.Login();
+            login.Show();
+            Application.Current.MainWindow.Close();
         }
 
         private async void ExecuteLogin(object parameter)
@@ -80,7 +90,7 @@ namespace OpenChart.ViewModel
                 login.Show();
                 Application.Current.MainWindow.Close();
                 //MessageBox.Show("Login successful!", "Success",
-                //        MessageBoxButton.OK, MessageBoxImage.Information);
+                //MessageBoxButton.OK, MessageBoxImage.Information);
 
 
             }
