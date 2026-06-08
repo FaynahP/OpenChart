@@ -201,7 +201,7 @@
     <Compile Include="View\SideBar.xaml.cs">
       <DependentUpon>SideBar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Staff\ClientEdit.xaml.cs">
+    <Compile Include="View\InvHandlers\ClientEdit.xaml.cs">
       <DependentUpon>ClientEdit.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\InvHandlers\Client-QuickAdd.xaml.cs">
@@ -222,7 +222,7 @@
     <Compile Include="View\Staff\Medicine.xaml.cs">
       <DependentUpon>Medicine.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Staff\MedicineEdit.xaml.cs">
+    <Compile Include="View\InvHandlers\MedicineEdit.xaml.cs">
       <DependentUpon>MedicineEdit.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\InvHandlers\Supplier-QuickAdd.xaml.cs">
@@ -237,13 +237,13 @@
     <Compile Include="View\Staff\SupplyBatches.xaml.cs">
       <DependentUpon>SupplyBatches.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Staff\SupplyEdit.xaml.cs">
+    <Compile Include="View\InvHandlers\SupplyEdit.xaml.cs">
       <DependentUpon>SupplyEdit.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Staff\Transactions.xaml.cs">
       <DependentUpon>Transactions.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Staff\TransactionsEdit.xaml.cs">
+    <Compile Include="View\InvHandlers\TransactionsEdit.xaml.cs">
       <DependentUpon>TransactionsEdit.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -291,7 +291,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Staff\ClientEdit.xaml">
+    <Page Include="View\InvHandlers\ClientEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -319,7 +319,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Staff\MedicineEdit.xaml">
+    <Page Include="View\InvHandlers\MedicineEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -339,7 +339,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Staff\SupplyEdit.xaml">
+    <Page Include="View\InvHandlers\SupplyEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -347,7 +347,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Staff\TransactionsEdit.xaml">
+    <Page Include="View\InvHandlers\TransactionsEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

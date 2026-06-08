@@ -10,9 +10,7 @@
      <SolidColorBrush Color="#f0f2f2"/>
  </Window.Background>
  <Viewbox Stretch="Uniform">
-     <Grid>
-
-        
+     <Grid>        
          <!--QUICK ADD CONTENT:SUPPLY-->
          <StackPanel  VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1">
              <Border Background="#dcf4f4" Height="451" Width="474" BorderThickness="1" BorderBrush="#aac7c7">

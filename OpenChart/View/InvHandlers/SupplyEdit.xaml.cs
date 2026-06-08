@@ -12,16 +12,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace OpenChart.View
+namespace OpenChart.View.InvHandlers
 {
     /// <summary>
-    /// Interaction logic for TransactionsEdit.xaml
+    /// Interaction logic for SupplyEdit.xaml
     /// </summary>
-    public partial class TransactionsEdit : Window
+    public partial class SupplyEdit : Window
     {
-        public TransactionsEdit()
+        public SupplyEdit()
         {
             InitializeComponent();
         }
+
+       
     }
 }

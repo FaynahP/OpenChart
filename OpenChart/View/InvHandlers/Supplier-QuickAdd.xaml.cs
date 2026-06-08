@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace OpenChart.View
+namespace OpenChart.View.InvHandlers
 {
     /// <summary>
     /// Interaction logic for Supplier_QuickAdd.xaml

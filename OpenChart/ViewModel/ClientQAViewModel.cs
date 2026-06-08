@@ -118,7 +118,7 @@ namespace OpenChart.ViewModel
         {
             var window = parameter as Window;
             var supplierQAViewModel = new SupplierQAViewModel(CurrentUser);
-            var supplierQAWindow = new View.Supplier_QuickAdd();
+            var supplierQAWindow = new View.InvHandlers.Supplier_QuickAdd();
             supplierQAWindow.DataContext = supplierQAViewModel;
             supplierQAWindow.Show();
             window?.Close();

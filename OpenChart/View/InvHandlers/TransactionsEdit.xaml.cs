@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace OpenChart.View
+namespace OpenChart.View.InvHandlers
 {
     /// <summary>
-    /// Interaction logic for MedicineEdit.xaml
+    /// Interaction logic for TransactionsEdit.xaml
     /// </summary>
-    public partial class MedicineEdit : Window
+    public partial class TransactionsEdit : Window
     {
-        public MedicineEdit()
+        public TransactionsEdit()
         {
             InitializeComponent();
         }
