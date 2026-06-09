@@ -10,17 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace OpenChart.View.Staff
 {
-    
-    public partial class Dashboard : Window
+    /// <summary>
+    /// Interaction logic for DashboardUCStaff.xaml
+    /// </summary>
+    public partial class DashboardUCStaff : UserControl
     {
-        public Dashboard()
+        public DashboardUCStaff()
         {
             InitializeComponent();
-
         }
     }
 }

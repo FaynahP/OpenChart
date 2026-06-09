@@ -41,7 +41,7 @@ namespace OpenChart.ViewModel
                 CurrentUser.Password = password.Password;   
             }
 
-            string connectionString = @"Data Source=XIAN;Initial Catalog=OpenChartDB;Trusted_Connection=True;TrustServerCertificate=True;";
+            string connectionString = @"Data Source=MWEZ\MSSQLSERVER2022;Initial Catalog=OpenChart (1);Trusted_Connection=True;TrustServerCertificate=True;";
 
             //seania's: @"Data Source=XIAN;Initial Catalog=OpenChart;Trusted_Connection=True;TrustServerCertificate=True;"
             //hannah's: @"Data Source=MWEZ\MSSQLSERVER2022;Initial Catalog=OpenChartDatabase;Trusted_Connection=True;TrustServerCertificate=True;"
@@ -79,18 +79,14 @@ namespace OpenChart.ViewModel
                 MessageBox.Show("Database connection failed: " + ex.Message);
                 return;
             }
-
+            //The Sidebars will be unique for each role
             if (isLoginValid)
             {
-               var DashboardViewModel = new DashboardViewModel(CurrentUser);
-               var login = new View.Staff.Dashboard();
-                
-                
-                login.DataContext = DashboardViewModel;
-                login.Show();
+                var sidebar = new View.Staff.StaffSideBar(CurrentUser);
+                sidebar.Show();
                 Application.Current.MainWindow.Close();
-                //MessageBox.Show("Login successful!", "Success",
-                //MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Login successful!", "Success",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
 
 
             }
@@ -103,5 +99,5 @@ namespace OpenChart.ViewModel
 
 
         }
-    }
+        }
 }

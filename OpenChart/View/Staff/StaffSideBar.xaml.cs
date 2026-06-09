@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OpenChart.Model;
+using OpenChart.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,16 +14,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace OpenChart.View
+namespace OpenChart.View.Staff
 {
     /// <summary>
-    /// Interaction logic for Medicine.xaml
+    /// Interaction logic for SideBar.xaml
     /// </summary>
-    public partial class Medicine : Window
+    public partial class StaffSideBar : Window
     {
-        public Medicine()
+        public StaffSideBar(UserModel CurrentUser)
         {
             InitializeComponent();
+            var viewModel = new SideBarCommand(CurrentUser);
+            viewModel.SetWindow(MainGrid, MainContent);
+            DataContext = viewModel;
         }
+
+       
     }
 }

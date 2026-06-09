@@ -19,19 +19,19 @@ namespace OpenChart.ViewModel
         public DashboardViewModel(UserModel currentuser)
         {
             CurrentUser = currentuser;
-            QA_ClientCommand = new RelayCommand(MoveToQA_Client);
+            //QA_ClientCommand = new RelayCommand(MoveToQA_Client);
             
         }
 
-        private void MoveToQA_Client(object parameter)
-        {
-            var window = parameter as Window;
-            var clientQAViewModel = new ClientQAViewModel(CurrentUser);
-            var clientQAWindow = new View.Client_QuickAdd();
-            clientQAWindow.DataContext = clientQAViewModel;
-            clientQAWindow.Show();
-            window?.Close();
-        }
+        //private void MoveToQA_Client(object parameter)
+        //{
+        //    var window = parameter as Window;
+        //    var clientQAViewModel = new ClientQAViewModel(CurrentUser);
+        //    var clientQAWindow = new View.Client_QuickAdd();
+        //    clientQAWindow.DataContext = clientQAViewModel;
+        //    clientQAWindow.Show();
+        //    window?.Close();
+        //}
 
     }
 }

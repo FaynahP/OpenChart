@@ -26,12 +26,12 @@
                 <TextBlock Text="OR" FontSize="12" FontFamily="Cascadia Mono" FontWeight="Bold" Foreground="#515151" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Border>
 
-            <Border Height="30" Width="200" Background="White" BorderThickness="1" CornerRadius="3" Margin="65,220,389,10" >
+            <Button Height="30" Width="200" Background="White" BorderThickness="1"  Margin="65,220,389,10" >
                 <StackPanel HorizontalAlignment="Center">
                     <Image Source="/Images/ICONS/GOOGLE.jpg" Margin="5,3,0,0"  Height="20" Width="20" HorizontalAlignment="Left"/>
-                    <TextBlock Text="Sign up with Google" FontSize="12" FontFamily="Cascadia Mono" Margin="30,-18,0,0" FontWeight="Bold" Foreground="Black" Width="150" Height="13" />
+                    <TextBlock Text="Sign up with Google" FontSize="12" FontFamily="Cascadia Mono" Margin="30,-20,0,0" FontWeight="Bold" Foreground="Black" Width="150" Height="13" />
                 </StackPanel>
-            </Border>
+            </Button>
             <StackPanel Margin="0,0,-80,0">
                 <TextBlock Text="Already have an account?" Height="10" Width="140" Margin="-450,300,0,0" FontSize="10" FontFamily="Cascadia Mono" FontWeight="Bold" Foreground="Black"/>
                 <Button Content="Sign In" Command="{Binding ExecuteGoToLogin}" Width="50" Height="20" Margin="-250,-15,0,0" FontSize="10" FontFamily="Cascadia Mono" FontWeight="Bold" Foreground="Blue" Background="Transparent" BorderThickness="0"/>

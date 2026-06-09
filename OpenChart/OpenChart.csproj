@@ -186,20 +186,32 @@
     <Compile Include="Model\SupplierModel.cs" />
     <Compile Include="Model\SupplyModel.cs" />
     <Compile Include="Model\UserModel.cs" />
-    <Compile Include="ViewModel\NavButton.cs" />
     <Compile Include="ViewModel\AsyncRelayCommand.cs" />
     <Compile Include="ViewModel\ClientQAViewModel.cs" />
     <Compile Include="ViewModel\DashboardViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\ObservableObject.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\SidebarCommand.cs" />
     <Compile Include="ViewModel\SupplierQAViewModel.cs" />
     <Compile Include="ViewModel\SupplyQAViewModel.cs" />
     <Compile Include="View\Admin\EditAcc.xaml.cs">
       <DependentUpon>EditAcc.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SideBar.xaml.cs">
-      <DependentUpon>SideBar.xaml</DependentUpon>
+    <Compile Include="View\Staff\AddClientUCStaff.xaml.cs">
+      <DependentUpon>AddClientUCStaff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\ClientUCStaff.xaml.cs">
+      <DependentUpon>ClientUCStaff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\MedicineUCStaff.xaml.cs">
+      <DependentUpon>MedicineUCStaff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InvHandlers\InvSideBar.xaml.cs">
+      <DependentUpon>InvSideBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\StaffSideBar.xaml.cs">
+      <DependentUpon>StaffSideBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\InvHandlers\ClientEdit.xaml.cs">
       <DependentUpon>ClientEdit.xaml</DependentUpon>
@@ -207,20 +219,14 @@
     <Compile Include="View\InvHandlers\Client-QuickAdd.xaml.cs">
       <DependentUpon>Client-QuickAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Staff\Client.xaml.cs">
-      <DependentUpon>Client.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\GettingIn\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\GettingIn\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Staff\Dashboard.xaml.cs">
-      <DependentUpon>Dashboard.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Staff\Medicine.xaml.cs">
-      <DependentUpon>Medicine.xaml</DependentUpon>
+    <Compile Include="View\Staff\DashboardUCStaff.xaml.cs">
+      <DependentUpon>DashboardUCStaff.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\InvHandlers\MedicineEdit.xaml.cs">
       <DependentUpon>MedicineEdit.xaml</DependentUpon>
@@ -228,23 +234,23 @@
     <Compile Include="View\InvHandlers\Supplier-QuickAdd.xaml.cs">
       <DependentUpon>Supplier-QuickAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Staff\Suppliers.xaml.cs">
+    <Compile Include="View\InvHandlers\Suppliers.xaml.cs">
       <DependentUpon>Suppliers.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\InvHandlers\Supply-QuickAdd.xaml.cs">
       <DependentUpon>Supply-QuickAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Staff\SupplyBatches.xaml.cs">
-      <DependentUpon>SupplyBatches.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\InvHandlers\SupplyEdit.xaml.cs">
       <DependentUpon>SupplyEdit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Staff\Transactions.xaml.cs">
-      <DependentUpon>Transactions.xaml</DependentUpon>
+    <Compile Include="View\Staff\SupplyBatchesUCStaff.xaml.cs">
+      <DependentUpon>SupplyBatchesUCStaff.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\InvHandlers\TransactionsEdit.xaml.cs">
       <DependentUpon>TransactionsEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\TransactionsUCStaff.xaml.cs">
+      <DependentUpon>TransactionsUCStaff.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -279,15 +285,27 @@
     <Resource Include="Images\ICONS\OCTempLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Themes\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="View\Admin\EditAcc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\SideBar.xaml">
+    <Page Include="View\Staff\AddClientUCStaff.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Staff\ClientUCStaff.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Staff\MedicineUCStaff.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InvHandlers\InvSideBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Staff\StaffSideBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -299,10 +317,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Staff\Client.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\GettingIn\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -311,11 +325,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Staff\Dashboard.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Staff\Medicine.xaml">
+    <Page Include="View\Staff\DashboardUCStaff.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -327,7 +337,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Staff\Suppliers.xaml">
+    <Page Include="View\InvHandlers\Suppliers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -335,19 +345,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Staff\SupplyBatches.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\InvHandlers\SupplyEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Staff\Transactions.xaml">
+    <Page Include="View\Staff\SupplyBatchesUCStaff.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\InvHandlers\TransactionsEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Staff\TransactionsUCStaff.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

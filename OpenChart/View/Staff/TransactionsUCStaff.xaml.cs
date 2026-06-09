@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace OpenChart.View.Staff
 {
     /// <summary>
-    /// Interaction logic for Client.xaml
+    /// Interaction logic for TransactionsUCStaff.xaml
     /// </summary>
-    public partial class Client : Window
+    public partial class TransactionsUCStaff : UserControl
     {
-        public Client()
+        public TransactionsUCStaff()
         {
             InitializeComponent();
         }

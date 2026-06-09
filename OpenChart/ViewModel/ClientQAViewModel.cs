@@ -25,16 +25,16 @@ namespace OpenChart.ViewModel
         public ICommand AddClientCommand { get; set; }
         public ICommand CancelAddClient { get; set; }
 
-        public ClientQAViewModel(UserModel currentuser)
-        {
-            addClient = new ClientModel();
+        //public ClientQAViewModel(UserModel currentuser)
+        //{
+        //    addClient = new ClientModel();
 
-            CurrentUser = currentuser;
-            AddClientCommand = new AsyncRelayCommand(ExecuteAddClient);
-            CancelAddClient = new RelayCommand(ExecuteCancelAddClient);
-            //QA_SupplyCommand = new RelayCommand(MoveToQA_Supply);
-            QA_SupplierCommand = new RelayCommand(MoveToQA_Supplier);
-        }
+        //    CurrentUser = currentuser;
+        //    AddClientCommand = new AsyncRelayCommand(ExecuteAddClient);
+        //    CancelAddClient = new RelayCommand(ExecuteCancelAddClient);
+        //    //QA_SupplyCommand = new RelayCommand(MoveToQA_Supply);
+        //    QA_SupplierCommand = new RelayCommand(MoveToQA_Supplier);
+        //}
 
         public async Task ExecuteAddClient(object parameter)
         {
@@ -88,20 +88,7 @@ namespace OpenChart.ViewModel
             }
         }
 
-        public void ExecuteCancelAddClient(object parameter)
-        {
-            addClient.Client_FName = string.Empty;
-            addClient.Client_LName = string.Empty;
-            addClient.Contact_Number = string.Empty;
-            addClient.Emergency_Contact = string.Empty;
-
-            var window = parameter as Window;
-            var dashboardViewModel = new DashboardViewModel(CurrentUser);
-            var dashboardWindow = new View.Staff.Dashboard();
-            dashboardWindow.DataContext = dashboardViewModel;
-            dashboardWindow.Show();
-            window?.Close();
-        }
+        
 
         //private void MoveToQA_Supply(object parameter)
         //{
@@ -114,14 +101,14 @@ namespace OpenChart.ViewModel
         //}
 
 
-        private void MoveToQA_Supplier(object parameter)
-        {
-            var window = parameter as Window;
-            var supplierQAViewModel = new SupplierQAViewModel(CurrentUser);
-            var supplierQAWindow = new View.InvHandlers.Supplier_QuickAdd();
-            supplierQAWindow.DataContext = supplierQAViewModel;
-            supplierQAWindow.Show();
-            window?.Close();
-        }
+        //private void MoveToQA_Supplier(object parameter)
+        //{
+        //    var window = parameter as Window;
+        //    var supplierQAViewModel = new SupplierQAViewModel(CurrentUser);
+        //    var supplierQAWindow = new View.InvHandlers.Supplier_QuickAdd();
+        //    supplierQAWindow.DataContext = supplierQAViewModel;
+        //    supplierQAWindow.Show();
+        //    window?.Close();
+        //}
     }
 }

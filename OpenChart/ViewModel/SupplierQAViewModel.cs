@@ -19,13 +19,13 @@ namespace OpenChart.ViewModel
         public ICommand AddSupplierCommand { get; set; }
         public ICommand CancelAddSupplier { get; set; }
 
-        public SupplierQAViewModel(UserModel currentuser)
-        {
-            CurrentUser = currentuser;
-            addSupplier = new SupplierModel();
-            AddSupplierCommand = new AsyncRelayCommand(ExecuteAddSupplier);
-            CancelAddSupplier = new RelayCommand(ExecuteCancelAddSupplier);
-        }
+        //public SupplierQAViewModel(UserModel currentuser)
+        //{
+        //    CurrentUser = currentuser;
+        //    addSupplier = new SupplierModel();
+        //    AddSupplierCommand = new AsyncRelayCommand(ExecuteAddSupplier);
+        //    CancelAddSupplier = new RelayCommand(ExecuteCancelAddSupplier);
+        //}
 
         public async Task ExecuteAddSupplier(object parameter)
         {
@@ -73,18 +73,18 @@ namespace OpenChart.ViewModel
             }
         }
 
-        public void ExecuteCancelAddSupplier(object parameter)
-        {
-            addSupplier.Supp_Name = string.Empty;
-            addSupplier.Contact_Number = string.Empty;
-            addSupplier.Email_Address = string.Empty;
+        //public void ExecuteCancelAddSupplier(object parameter)
+        //{
+        //    addSupplier.Supp_Name = string.Empty;
+        //    addSupplier.Contact_Number = string.Empty;
+        //    addSupplier.Email_Address = string.Empty;
 
-            var window = parameter as Window;
-            var dashboardViewModel = new DashboardViewModel(CurrentUser);
-            var dashboardWindow = new View.Staff.Dashboard();
-            dashboardWindow.DataContext = dashboardViewModel;
-            dashboardWindow.Show();
-            window?.Close();
-        }
+        //    var window = parameter as Window;
+        //    var dashboardViewModel = new DashboardViewModel(CurrentUser);
+        //    //var dashboardWindow = new View.Staff.Dashboard();
+        //    //dashboardWindow.DataContext = dashboardViewModel;
+        //    //dashboardWindow.Show();
+        //    window?.Close();
+        //}
     }
 }

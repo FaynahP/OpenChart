@@ -10,17 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace OpenChart.View.InvHandlers
+namespace OpenChart.View.Staff
 {
-
     /// <summary>
-    /// Interaction logic for Client_QuickAdd.xaml
+    /// Interaction logic for SupplyBatchesUCStaff.xaml
     /// </summary>
-    public partial class Client_QuickAdd : Window
+    public partial class SupplyBatchesUCStaff : UserControl
     {
-        public Client_QuickAdd()
+        public SupplyBatchesUCStaff()
         {
             InitializeComponent();
         }

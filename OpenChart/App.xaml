@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:OpenChart"
              xmlns:MyNamespace="clr-namespace:OpenChart"
-             StartupUri="View/InvHandlers/Client-QuickAdd.xaml">
+             StartupUri="View/GettingIn/Login.xaml">
     <Application.Resources>
          
     </Application.Resources>
