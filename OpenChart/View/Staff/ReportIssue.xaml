@@ -1,11 +1,11 @@
-﻿<Window x:Class="OpenChart.View.InvHandlers.ClientEdit"
+﻿<Window x:Class="OpenChart.View.Staff.ReportIssue"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:OpenChart.View.InvHandlers"
+        xmlns:local="clr-namespace:OpenChart.View.Staff"
         mc:Ignorable="d"
-        Title="ClientEdit" Height="450" Width="450">
+        Title="ReportIssue" Height="450" Width="450">
     <Viewbox Stretch="Uniform">
         <Grid>
             <StackPanel  VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1">
@@ -14,20 +14,20 @@
                         <Border Background="#ebffff" Height= "375" Width="450" Margin="0,60,0,0">
                             <StackPanel Margin="0,-20,0,0">
                                 <Border Background="#ebffff" Height= "375" Width="450" Margin="0,30,0,0">
-                                    <StackPanel Margin="0,-20,0,0">
-                                        <StackPanel Margin="20,10,10,10" HorizontalAlignment="Left">
-                                            <TextBlock Text="First Name" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20" Margin="-50,50,0,0" Width="100"/>
-                                            <TextBlock Text="Last Name" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="-50,50,0,0" Width="100"/>
-                                            <TextBlock Text="Contact No." FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="-50,50,0,0" Width="100"/>
-                                            <TextBlock Text="Emergency Contact" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="0,50,0,0" Width="150"/>
+                                    <StackPanel Margin="0,-30,0,0">
+                                        <StackPanel Margin="20,-10,0,10" HorizontalAlignment="Left">
+                                            <TextBlock Text="Name" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20" Margin="-50,50,0,0" Width="100"/>
+                                            <TextBlock Text="Phone" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="-50,50,0,0" Width="100"/>
+                                            <TextBlock Text="Email Address" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="-50,50,0,0" Width="100"/>
+                                            <TextBlock Text="Describe the problem" FontSize="15" FontFamily="Gill Sans MT" FontWeight="UltraBold" Height="20"  Margin="0,50,0,0" Width="155"/>
                                         </StackPanel>
-                                        <StackPanel Margin="200,-240,10,10" HorizontalAlignment="Left">
-                                            <TextBox Height="20" Width="200"/>
-                                            <TextBox Height="20" Width="200" Margin="0,50,0,0"/>
-                                            <TextBox Height="20" Width="200" Margin="0,50,0,0"/>
-                                            <TextBox Height="20" Width="200" Margin="0,50,0,0"/>
+                                        <StackPanel Margin="20,-210,10,10" HorizontalAlignment="Left">
+                                            <TextBox Height="20" Width="240" Margin="0,0,160,0"/>
+                                            <TextBox Height="20" Width="240" Margin="0,50,160,0"/>
+                                            <TextBox Height="20" Width="240" Margin="0,50,160,0"/>
+                                            <TextBox Height="55" Width="400" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,50,0,0"/>
                                         </StackPanel>
-                                        <Button Content="SAVE" Height="40" Width="90" HorizontalAlignment="Right" Margin="0,20,160,0" Background="#9bdbdb" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
+                                        <Button Content="SAVE" Height="40" Width="90" HorizontalAlignment="Right" Margin="0,0,160,0" Background="#9bdbdb" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
                                         <Button Content="DELETE" Height="40" Width="90" HorizontalAlignment="Right" Margin="0,-40,50,0" Background="#db9b9b" BorderThickness="1" BorderBrush="#43989b" FontFamily="Gill Sans MT"  FontWeight="Bold"/>
                                     </StackPanel>
 
@@ -39,11 +39,11 @@
                         </Border>
                         <Border  Background="#9bdbdb" Height= "45" Width="474" Margin="-1,-832.75,0,0" BorderThickness="1" BorderBrush="#aac7c7">
                             <Grid>
-                                <TextBlock Text="EDIT CLIENT" FontFamily="Century Gothic" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBlock Text="REPORT" FontFamily="Century Gothic" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             </Grid>
-                            
+
                         </Border>
-                     
+
                     </StackPanel>
 
                 </Border>

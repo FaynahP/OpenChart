@@ -1,6 +1,4 @@
-﻿using OpenChart.Model;
-using OpenChart.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,19 +15,13 @@ using System.Windows.Shapes;
 namespace OpenChart.View.InvHandlers
 {
     /// <summary>
-    /// Interaction logic for SideBar.xaml
+    /// Interaction logic for SupplierEdit.xaml
     /// </summary>
-    public partial class InvSideBar : Window
+    public partial class SupplierEdit : Window
     {
-        
-        public InvSideBar(UserModel CurrentUser)
+        public SupplierEdit()
         {
             InitializeComponent();
-            var viewModel = new SideBarCommand(CurrentUser);
-            viewModel.SetWindow(MainGrid, MainContent); 
-            DataContext = viewModel;
         }
-
-       
     }
 }

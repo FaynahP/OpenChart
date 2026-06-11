@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace OpenChart.View.Staff
+namespace OpenChart.View.InvHandlers
 {
     /// <summary>
-    /// Interaction logic for AddClientUCStaff.xaml
+    /// Interaction logic for SuppliersUCInv.xaml
     /// </summary>
-    public partial class AddClientUCStaff : UserControl
+    public partial class SuppliersUCInv : UserControl
     {
-        public AddClientUCStaff()
+        public SuppliersUCInv()
         {
             InitializeComponent();
         }

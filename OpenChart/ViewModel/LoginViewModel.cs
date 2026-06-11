@@ -82,11 +82,12 @@ namespace OpenChart.ViewModel
             //The Sidebars will be unique for each role
             if (isLoginValid)
             {
-                var sidebar = new View.Staff.StaffSideBar(CurrentUser);
-                sidebar.Show();
+                var staff = new View.Staff.StaffSideBar(CurrentUser);
+                var invhandler = new View.InvHandlers.InvSideBar(CurrentUser);
+                invhandler.Show();
                 Application.Current.MainWindow.Close();
-                MessageBox.Show("Login successful!", "Success",
-                    MessageBoxButton.OK, MessageBoxImage.Information);
+                //MessageBox.Show("Login successful!", "Success",
+                //    MessageBoxButton.OK, MessageBoxImage.Information);
 
 
             }

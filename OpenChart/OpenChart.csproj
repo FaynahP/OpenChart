@@ -198,8 +198,29 @@
     <Compile Include="View\Admin\EditAcc.xaml.cs">
       <DependentUpon>EditAcc.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Staff\AddClientUCStaff.xaml.cs">
-      <DependentUpon>AddClientUCStaff.xaml</DependentUpon>
+    <Compile Include="View\InvHandlers\ClientUCInv.xaml.cs">
+      <DependentUpon>ClientUCInv.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InvHandlers\DashboardUCInv.xaml.cs">
+      <DependentUpon>DashboardUCInv.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InvHandlers\MedicineUCInv.xaml.cs">
+      <DependentUpon>MedicineUCInv.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InvHandlers\SupplierEdit.xaml.cs">
+      <DependentUpon>SupplierEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InvHandlers\SuppliersUCInv.xaml.cs">
+      <DependentUpon>SuppliersUCInv.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InvHandlers\SupplyBatchesUCInv.xaml.cs">
+      <DependentUpon>SupplyBatchesUCInv.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InvHandlers\TransactionsUCInv.xaml.cs">
+      <DependentUpon>TransactionsUCInv.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\AddTransactionsUCStaff.xaml.cs">
+      <DependentUpon>AddTransactionsUCStaff.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Staff\ClientUCStaff.xaml.cs">
       <DependentUpon>ClientUCStaff.xaml</DependentUpon>
@@ -209,6 +230,9 @@
     </Compile>
     <Compile Include="View\InvHandlers\InvSideBar.xaml.cs">
       <DependentUpon>InvSideBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\ReportIssue.xaml.cs">
+      <DependentUpon>ReportIssue.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Staff\StaffSideBar.xaml.cs">
       <DependentUpon>StaffSideBar.xaml</DependentUpon>
@@ -233,9 +257,6 @@
     </Compile>
     <Compile Include="View\InvHandlers\Supplier-QuickAdd.xaml.cs">
       <DependentUpon>Supplier-QuickAdd.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\InvHandlers\Suppliers.xaml.cs">
-      <DependentUpon>Suppliers.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\InvHandlers\Supply-QuickAdd.xaml.cs">
       <DependentUpon>Supply-QuickAdd.xaml</DependentUpon>
@@ -289,7 +310,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Staff\AddClientUCStaff.xaml">
+    <Page Include="View\InvHandlers\ClientUCInv.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InvHandlers\DashboardUCInv.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InvHandlers\MedicineUCInv.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InvHandlers\SupplierEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InvHandlers\SuppliersUCInv.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InvHandlers\SupplyBatchesUCInv.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InvHandlers\TransactionsUCInv.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Staff\AddTransactionsUCStaff.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -304,6 +353,10 @@
     <Page Include="View\InvHandlers\InvSideBar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Staff\ReportIssue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Staff\StaffSideBar.xaml">
       <SubType>Designer</SubType>
@@ -334,10 +387,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\InvHandlers\Supplier-QuickAdd.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\InvHandlers\Suppliers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

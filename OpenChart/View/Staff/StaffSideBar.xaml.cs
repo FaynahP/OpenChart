@@ -29,6 +29,6 @@ namespace OpenChart.View.Staff
             DataContext = viewModel;
         }
 
-       
+        
     }
 }

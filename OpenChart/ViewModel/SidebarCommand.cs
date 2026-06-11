@@ -1,6 +1,7 @@
 ﻿using OpenChart.Model;
 using OpenChart.View;
 using OpenChart.View.Staff;
+using OpenChart.View.InvHandlers;
 using System;
 using System.ComponentModel;
 using System.Windows;
@@ -25,15 +26,24 @@ namespace OpenChart.ViewModel
             }
         }
 
-        // --- COMMANDS ---
-        public ICommand ToggleMenuCommand { get; }
-        public ICommand QA_ClientCommand { get; }
-        public ICommand DashCommand { get; }
-        public ICommand MedicineCommand { get; }
-        public ICommand ClientCommand { get; }
-        public ICommand TransCommand { get; }
-        public ICommand SuBCommand { get; }
-        public ICommand SuppCommand { get; }
+        // --- STAFF COMMANDS ---
+        public ICommand ToggleMenuCommand { get; set; }
+        public ICommand DashCommand { get; set; }
+        public ICommand MedicineCommand { get; set; }
+        public ICommand ClientCommand { get; set; }
+        public ICommand TransCommand { get; set; }
+        public ICommand SuBCommand { get; set; }
+        public ICommand AddTransCommand { get; set; }
+        public ICommand ReportCommand { get; set; }
+
+        // --- INV HANDLERS COMMANDS ---
+        public ICommand IHDashCommand { get; set; }
+        public ICommand IHvMedicineCommand { get; set; }
+        public ICommand IHClientCommand { get; set; }
+        public ICommand IHTransCommand { get; set; }
+        public ICommand IHSuBCommand { get; set; }
+        public ICommand SuppCommand { get; set; }
+        public ICommand QACommand { get; set; }
 
         private Grid _mainGrid;
         private Border _mainBorder;
@@ -41,15 +51,36 @@ namespace OpenChart.ViewModel
         public SideBarCommand(UserModel currentUser)
         {
             _currentUser = currentUser;
+            // STAFF COMMANDS
             ToggleMenuCommand = new RelayCommand(param => ToggleMenu());
             DashCommand = new RelayCommand(param => Navigate(new DashboardUCStaff()));
             ClientCommand = new RelayCommand(param => Navigate(new ClientUCStaff()));
             MedicineCommand = new RelayCommand(param => Navigate(new MedicineUCStaff())); 
             TransCommand = new RelayCommand(param => Navigate(new TransactionsUCStaff()));
             SuBCommand = new RelayCommand(param => Navigate(new SupplyBatchesUCStaff()));
-           
-        }
+            AddTransCommand = new RelayCommand(param => Navigate(new AddTransactionsUCStaff()));
+            ReportCommand = new RelayCommand(param => OpenReportWindow());  // Open Window
+            // INV HANDLERS COMMANDS
+            IHClientCommand = new RelayCommand(param => Navigate(new ClientUCInv()));
+            IHDashCommand = new RelayCommand(param => Navigate(new DashboardUCInv()));
+            IHSuBCommand = new RelayCommand(param => Navigate(new SupplyBatchesUCInv()));
+            IHTransCommand = new RelayCommand(param => Navigate(new TransactionsUCInv()));
+            IHvMedicineCommand = new RelayCommand(param => Navigate(new MedicineUCInv()));
+            SuppCommand = new RelayCommand(param => Navigate(new SuppliersUCInv()));
+            QACommand = new RelayCommand(param => InvQACommand());
 
+
+        }
+        private void InvQACommand()
+        {
+            var qaWindow = new Client_QuickAdd();
+            qaWindow.Show();
+        }
+        private void OpenReportWindow()
+        {
+            var reportWindow = new ReportIssue();
+            reportWindow.Show();
+        }
         public void SetWindow(Grid mainGrid, Border mainBorder)
         {
             _mainGrid = mainGrid;
